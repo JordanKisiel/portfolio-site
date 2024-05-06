@@ -1,22 +1,6 @@
 import type { Metadata } from "next"
-import { Outfit, Abhaya_Libre, Amiko } from "next/font/google"
+import { outfit, abhaya, amiko } from "@/assets/fonts"
 import "./globals.css"
-
-const outfit = Outfit({
-    weight: "700",
-    subsets: ["latin"],
-    variable: "--font-outfit",
-})
-const abhaya = Abhaya_Libre({
-    weight: ["400", "700"],
-    subsets: ["latin"],
-    variable: "--font-abhaya",
-})
-const amiko = Amiko({
-    weight: "600",
-    subsets: ["latin"],
-    variable: "--font-amiko",
-})
 
 export const metadata: Metadata = {
     title: "Jordan Kisiel - Web Developer Portfolio",
