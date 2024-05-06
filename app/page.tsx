@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 export default function Home() {
     return (
         <>
@@ -11,8 +9,8 @@ export default function Home() {
                 </ul>
             </nav>
             <h1>Hi, I'm Jordan</h1>
-            {/* texture overall -> TODO: add image */}
-            <div></div>
+            {/* texture overaly */}
+            <div className="absolute inset-0 z-50 bg-[url('../public/star.png')] bg-[length:8px] opacity-10 pointer-events-none"></div>
         </>
     )
 }
