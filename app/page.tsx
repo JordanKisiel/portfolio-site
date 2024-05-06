@@ -29,7 +29,7 @@ export default function Home() {
                         Fullstack Web Developer
                     </span>
                     <span className="block text-[1rem] font-bold leading-8">
-                        (amoung other things)
+                        (among other things)
                     </span>
                 </p>
             </div>
