@@ -34,6 +34,11 @@ const config: Config = {
                 900: "#161616",
             },
         },
+        fontFamily: {
+            outfit: "var(--font-outfit)",
+            abhaya: "var(--font-abhaya)",
+            amiko: "var(--font-amiko)",
+        },
     },
     plugins: [],
 }
