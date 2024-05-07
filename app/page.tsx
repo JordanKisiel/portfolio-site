@@ -6,6 +6,7 @@ import emailIcon from "@/public/email-icon.svg"
 import linkedinIcon from "@/public/linkedin-icon.svg"
 import githubIcon from "@/public/email-icon.svg"
 import resumeIcon from "@/public/resume-icon.svg"
+import ContactListLink from "@/components/ContactListLink"
 
 export default function Home() {
     return (
@@ -34,26 +35,27 @@ export default function Home() {
                     <div className="bg-red-400 rounded-[5px] rotate-[7deg]">
                         <ul className="flex flex-col font-abhaya font-semibold bg-blue-100 p-5 rounded-[5px] gap-5 -rotate-[4deg]">
                             {/* TODO: also consider making this link copy the email address for pasting? */}
-                            <li className="bg-[url('../public/email-icon.svg')] bg-no-repeat bg-left pl-8">
-                                <Link href="mailto:jordan.kisiel@gmail.com">
-                                    jordan.kisiel@gmail.com
-                                </Link>
-                            </li>
-                            <li className="bg-[url('../public/linkedin-icon.svg')] bg-no-repeat bg-left pl-8">
-                                <Link href="https://linkedin.com/in/jordan-kisiel-b60129114">
-                                    Linkedin
-                                </Link>
-                            </li>
-                            <li className="bg-[url('../public/github-icon.svg')] bg-no-repeat bg-left pl-8">
-                                <Link href="https://github.com/JordanKisiel">
-                                    Github
-                                </Link>
-                            </li>
-                            <li className="bg-[url('../public/resume-icon.svg')] bg-no-repeat bg-left pl-8">
-                                <Link href="https://github.com/JordanKisiel">
-                                    Resume
-                                </Link>
-                            </li>
+                            <ContactListLink
+                                bgIcon="bg-[url('../public/email-icon.svg')]"
+                                linkUrl="mailto:jordan.kisiel@gmail.com"
+                                text="jordan.kisiel@gmail.com"
+                            />
+                            <ContactListLink
+                                bgIcon="bg-[url('../public/linkedin-icon.svg')]"
+                                linkUrl="https://linkedin.com/in/jordan-kisiel-b60129114"
+                                text="Linkedin"
+                            />
+                            <ContactListLink
+                                bgIcon="bg-[url('../public/github-icon.svg')]"
+                                linkUrl="https://github.com/JordanKisiel"
+                                text="Github"
+                            />
+                            {/* TODO: add google doc link to resume */}
+                            <ContactListLink
+                                bgIcon="bg-[url('../public/resume-icon.svg')]"
+                                linkUrl="#"
+                                text="Resume (on Google Docs)"
+                            />
                         </ul>
                     </div>
                 </div>
@@ -61,7 +63,7 @@ export default function Home() {
 
             {/* texture overaly */}
             {/* pointer-events-none allows clicks through the overlay */}
-            <div className="absolute inset-0 z-50 bg-[url('../public/star.png')] bg-[length:8px] opacity-5 pointer-events-none"></div>
+            <div className="fixed inset-0 z-50 bg-[url('../public/star.png')] bg-[length:8px] opacity-5 pointer-events-none"></div>
         </>
     )
 }
