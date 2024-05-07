@@ -8,11 +8,13 @@ type Props = {
         textWidth: string
     }
     iconOptions: {
-        icon: StaticImport
+        icon: StaticImport | string
         iconAlt: string
         iconPosX: string
         iconPosY: string
         iconRotation: string
+        iconWidth: number
+        iconHeight: number
     }
     badgeOptions: {
         bgColor: string
@@ -59,6 +61,8 @@ export default function Flair({
             <Image
                 className={`absolute ${iconOptions.iconRotation} ${iconOptions.iconPosX} ${iconOptions.iconPosY}`}
                 src={iconOptions.icon}
+                width={iconOptions.iconWidth}
+                height={iconOptions.iconHeight}
                 alt={iconOptions.iconAlt}
             />
         </div>

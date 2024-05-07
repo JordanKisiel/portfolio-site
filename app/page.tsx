@@ -2,14 +2,21 @@ import Nav from "@/components/Nav"
 import IntroText from "@/components/IntroText"
 import Photo from "@/components/Photo"
 import ContactListLink from "@/components/ContactListLink"
-import novaIcon from "@/public/nova.svg"
-import tagsIcon from "@/public/tags.svg"
-import homerIcon from "@/public/homer.svg"
-import foobarIcon from "@/public/foobar.svg"
-import waterIcon from "@/public/water.svg"
 import Flair from "@/components/Flair"
+import flairData from "@/data/flair.json"
 
 export default function Home() {
+    const piecesOfFlair = flairData.flair.map((piece) => {
+        return (
+            <Flair
+                key={piece.textOptions.text}
+                textOptions={piece.textOptions}
+                iconOptions={piece.iconOptions}
+                badgeOptions={piece.badgeOptions}
+            />
+        )
+    })
+
     return (
         <>
             <Nav />
@@ -72,111 +79,7 @@ export default function Home() {
                 </h2>
                 {/* Pieces of flair */}
                 {/* TODO: create flair programmatically from external json file */}
-                <Flair
-                    textOptions={{
-                        text: "Nova Based",
-                        textColor: "text-purple-100",
-                        textWidth: "w-1/3",
-                    }}
-                    iconOptions={{
-                        icon: novaIcon,
-                        iconAlt: "Northern Virginia icon",
-                        iconRotation: "-rotate-3",
-                        iconPosX: "-left-6",
-                        iconPosY: "-top-5",
-                    }}
-                    badgeOptions={{
-                        bgColor: "bg-purple-400",
-                        leftSpacing: "w-[1rem]",
-                        rightSpacing: "w-[0rem]",
-                        badgeRotation: "rotate-3",
-                        isIconFirst: true,
-                    }}
-                />
-                <Flair
-                    textOptions={{
-                        text: "React Pro",
-                        textColor: "text-red-100",
-                        textWidth: "w-2/3",
-                    }}
-                    iconOptions={{
-                        icon: tagsIcon,
-                        iconAlt: "Code tags icon",
-                        iconRotation: "rotate-0",
-                        iconPosX: "-right-1",
-                        iconPosY: "-top-5",
-                    }}
-                    badgeOptions={{
-                        bgColor: "bg-red-400",
-                        leftSpacing: "w-[0rem]",
-                        rightSpacing: "w-[1rem]",
-                        badgeRotation: "-rotate-1",
-                        isIconFirst: false,
-                    }}
-                />
-                <Flair
-                    textOptions={{
-                        text: "Simpsons Quoter",
-                        textColor: "text-pink-100",
-                        textWidth: "w-1/2",
-                    }}
-                    iconOptions={{
-                        icon: homerIcon,
-                        iconAlt: "Homer Simpson head icon",
-                        iconRotation: "-rotate-3",
-                        iconPosX: "-right-0",
-                        iconPosY: "-top-[3.6rem]",
-                    }}
-                    badgeOptions={{
-                        bgColor: "bg-pink-400",
-                        leftSpacing: "w-[0.5rem]",
-                        rightSpacing: "w-[0.5rem]",
-                        badgeRotation: "rotate-2",
-                        isIconFirst: false,
-                    }}
-                />
-                <Flair
-                    textOptions={{
-                        text: "Google Foobar Challenger",
-                        textColor: "text-orange-100",
-                        textWidth: "w-full",
-                    }}
-                    iconOptions={{
-                        icon: foobarIcon,
-                        iconAlt: "Google Foobar Challenge icon",
-                        iconRotation: "-rotate-3",
-                        iconPosX: "-left-12",
-                        iconPosY: "-top-3",
-                    }}
-                    badgeOptions={{
-                        bgColor: "bg-orange-400",
-                        leftSpacing: "w-[0rem]",
-                        rightSpacing: "w-[0rem]",
-                        badgeRotation: "-rotate-3",
-                        isIconFirst: true,
-                    }}
-                />
-                <Flair
-                    textOptions={{
-                        text: "Beginner Rower",
-                        textColor: "text-blue-100",
-                        textWidth: "w-2/3",
-                    }}
-                    iconOptions={{
-                        icon: waterIcon,
-                        iconAlt: "Water icon",
-                        iconRotation: "-rotate-0",
-                        iconPosX: "-right-2",
-                        iconPosY: "-top-0",
-                    }}
-                    badgeOptions={{
-                        bgColor: "bg-blue-400",
-                        leftSpacing: "w-[0rem]",
-                        rightSpacing: "w-[2rem]",
-                        badgeRotation: "rotate-2",
-                        isIconFirst: false,
-                    }}
-                />
+                {piecesOfFlair}
             </div>
 
             {/* texture overlay */}
