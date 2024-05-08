@@ -4,17 +4,18 @@ import Image from "next/image"
 type Props = {
     textOptions: {
         text: string
+        subtext?: string
         textColor: string
         textWidth: string
     }
     iconOptions: {
-        icon: StaticImport | string
+        icon: string | number
         iconAlt: string
         iconPosX: string
         iconPosY: string
         iconRotation: string
-        iconWidth: number
-        iconHeight: number
+        iconWidth?: number
+        iconHeight?: number
     }
     badgeOptions: {
         bgColor: string
@@ -46,25 +47,40 @@ export default function Flair({
                                            : "justify-start"
                                    }`}
             >
-                <p
-                    className={`font-amiko uppercase text-xl ${
-                        textOptions.textColor
-                    } ${textOptions.textWidth} ${
+                <div
+                    className={`${textOptions.textWidth} ${
                         badgeOptions.isIconFirst ? "text-right" : "text-left"
                     }`}
                 >
-                    {textOptions.text}
-                </p>
+                    <p
+                        className={`font-amiko uppercase text-xl ${textOptions.textColor}`}
+                    >
+                        {textOptions.text}
+                    </p>
+                    {textOptions.subtext && (
+                        <p
+                            className={`font-amiko uppercase text-[0.625rem] ${textOptions.textColor}`}
+                        >
+                            {textOptions.subtext}
+                        </p>
+                    )}
+                </div>
             </div>
             {/* right spacer */}
             <div className={`${badgeOptions.rightSpacing} h-[1rem]`}></div>
-            <Image
-                className={`absolute ${iconOptions.iconRotation} ${iconOptions.iconPosX} ${iconOptions.iconPosY}`}
-                src={iconOptions.icon}
-                width={iconOptions.iconWidth}
-                height={iconOptions.iconHeight}
-                alt={iconOptions.iconAlt}
-            />
+            {typeof iconOptions.icon === "number" ? (
+                <p
+                    className={`absolute font-orelega text-[7rem] text-neutral-900 text-stroke-2 text-stroke-red-100 [text-shadow:_5px_5px_0_rgb(21_21_21_/_100%)] ${iconOptions.iconRotation} ${iconOptions.iconPosX} ${iconOptions.iconPosY}`}
+                >{`${iconOptions.icon}`}</p>
+            ) : (
+                <Image
+                    className={`absolute ${iconOptions.iconRotation} ${iconOptions.iconPosX} ${iconOptions.iconPosY}`}
+                    src={iconOptions.icon}
+                    width={iconOptions.iconWidth}
+                    height={iconOptions.iconHeight}
+                    alt={iconOptions.iconAlt}
+                />
+            )}
         </div>
     )
 }

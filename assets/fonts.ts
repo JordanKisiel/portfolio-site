@@ -1,4 +1,4 @@
-import { Outfit, Abhaya_Libre, Amiko } from "next/font/google"
+import { Outfit, Abhaya_Libre, Amiko, Orelega_One } from "next/font/google"
 
 export const outfit = Outfit({
     weight: "700",
@@ -14,4 +14,9 @@ export const amiko = Amiko({
     weight: "600",
     subsets: ["latin"],
     variable: "--font-amiko",
+})
+export const orelega = Orelega_One({
+    weight: "400",
+    subsets: ["latin"],
+    variable: "--font-orelega",
 })

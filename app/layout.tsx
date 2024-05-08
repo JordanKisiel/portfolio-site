@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { outfit, abhaya, amiko } from "@/assets/fonts"
+import { outfit, abhaya, amiko, orelega } from "@/assets/fonts"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${outfit.variable} ${abhaya.variable} ${amiko.variable} bg-orange-100`}
+                className={`${outfit.variable} ${abhaya.variable} ${amiko.variable} ${orelega.variable} bg-orange-100`}
             >
                 {children}
             </body>

@@ -6,7 +6,7 @@ import Flair from "@/components/Flair"
 import flairData from "@/data/flair.json"
 
 export default function Home() {
-    const piecesOfFlair = flairData.flair.map((piece) => {
+    let piecesOfFlair = flairData.flair.map((piece) => {
         return (
             <Flair
                 key={piece.textOptions.text}
@@ -17,6 +17,34 @@ export default function Home() {
         )
     })
 
+    //add piece of flair that counts the total number of pieces
+    piecesOfFlair = [
+        ...piecesOfFlair,
+        <Flair
+            key="Pieces of Flair"
+            textOptions={{
+                text: "Pieces of Flair",
+                subtext: "(Well below the minimum)",
+                textColor: "text-red-100",
+                textWidth: "w-full",
+            }}
+            iconOptions={{
+                icon: piecesOfFlair.length + 1,
+                iconAlt: "n/a",
+                iconPosX: "-left-2",
+                iconPosY: "-top-[3.5rem]",
+                iconRotation: "-rotate-6",
+            }}
+            badgeOptions={{
+                bgColor: "bg-red-400",
+                badgeRotation: "-rotate-2",
+                isIconFirst: true,
+                leftSpacing: "w-[1rem]",
+                rightSpacing: "w-[0.5rem]",
+            }}
+        />,
+    ]
+
     return (
         <>
             <Nav />
@@ -24,7 +52,7 @@ export default function Home() {
             <div className="flex flex-col items-center pt-20 gap-5 mb-10">
                 <IntroText width={220} />
                 <Photo />
-                <p className="flex flex-col items-center font-abhaya text-center">
+                <p className="flex flex-col items-center font-abhaya text-neutral-900 text-center">
                     <span className="block text-2xl font-bold leading-9">
                         a
                     </span>
@@ -74,11 +102,9 @@ export default function Home() {
 
             {/* About Me */}
             <div className="flex flex-col items-center mx-5 gap-5">
-                <h2 className="font-outfit text-5xl text-center mb-5">
+                <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5">
                     About Me
                 </h2>
-                {/* Pieces of flair */}
-                {/* TODO: create flair programmatically from external json file */}
                 {piecesOfFlair}
             </div>
 

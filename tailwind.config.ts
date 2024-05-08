@@ -39,8 +39,9 @@ const config: Config = {
             outfit: "var(--font-outfit)",
             abhaya: "var(--font-abhaya)",
             amiko: "var(--font-amiko)",
+            orelega: "var(--font-orelega)",
         },
     },
-    plugins: [],
+    plugins: [require("@designbycode/tailwindcss-text-stroke")],
 }
 export default config
