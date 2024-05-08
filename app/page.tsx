@@ -1,9 +1,11 @@
+import Image from "next/image"
 import Nav from "@/components/Nav"
 import IntroText from "@/components/IntroText"
 import Photo from "@/components/Photo"
 import ContactListLink from "@/components/ContactListLink"
 import Flair from "@/components/Flair"
 import flairData from "@/data/flair.json"
+import rainbowArrow from "@/public/rainbow-arrow.svg"
 
 export default function Home() {
     let piecesOfFlair = flairData.flair.map((piece) => {
@@ -101,11 +103,41 @@ export default function Home() {
             </div>
 
             {/* About Me */}
-            <div className="flex flex-col items-center mx-5 gap-5">
+            <div className="flex flex-col items-center mx-5 gap-5 mb-40">
                 <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5">
                     About Me
                 </h2>
                 {piecesOfFlair}
+            </div>
+
+            {/* Porfolio */}
+            <div className="mx-5">
+                <div
+                    className="flex flex-col items-center bg-[url('../public/portfolio-bg.svg')] bg-no-repeat 
+                                pt-3 pb-20 bg-top mb-10"
+                >
+                    <h2 className="font-outfit text-neutral-900 text-4xl text-center mb-5">
+                        Portfolio
+                    </h2>
+                    <Image
+                        src={rainbowArrow}
+                        alt="rainbow arrow pointing down"
+                    />
+                </div>
+                {/* kanban project */}
+                <div className="">
+                    <div
+                        className="rounded-[5px] overflow-hidden bg-[url('../public/kanban-mobile-thumb.png')] w-full h-48 
+                                    bg-[length:80rem] bg-[-8rem_-3rem] mb-[0.625rem]"
+                    ></div>
+                    <h3
+                        className="font-amiko text-neutral-900 text-2xl leading-6 text-center uppercase bg-neutral-100 
+                                   rounded-[5px] shadow-[inset_2px_2px_2px_0_rgba(0,0,0,0.25)] border-2 border-[#EFEFEF]
+                                   py-5"
+                    >
+                        Kanban Project Management Tool
+                    </h3>
+                </div>
             </div>
 
             {/* texture overlay */}
