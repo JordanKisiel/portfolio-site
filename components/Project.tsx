@@ -1,0 +1,53 @@
+type Props = {
+    title: string
+    image: string
+    imageSize: string
+    imagePosition: string
+    linesOfCode: number
+    numOfCommits: number
+    children: JSX.Element
+}
+
+export default function Project({
+    title,
+    image,
+    imageSize,
+    imagePosition,
+    linesOfCode,
+    numOfCommits,
+    children,
+}: Props) {
+    return (
+        <div className="mb-20">
+            <h3
+                className="font-amiko text-neutral-900 text-2xl leading-6 text-center uppercase bg-neutral-100 
+                                   rounded-[5px] shadow-[inset_2px_2px_2px_0_rgba(0,0,0,0.25)] border-2 border-[#EFEFEF]
+                                   pt-3 pb-2 mb-[0.625rem]"
+            >
+                {title}
+            </h3>
+            <div
+                className={`rounded-[5px] overflow-hidden w-full h-48 mb-[0.625rem] ${image} ${imageSize} ${imagePosition}`}
+            ></div>
+
+            <div className="flex flex-row justify-between font-abhaya gap-[0.625rem] mb-[0.625rem]">
+                <div
+                    className="flex flex-col justify-center items-center rounded-[5px] bg-neutral-100 w-1/2 py-[0.625rem]
+                                        shadow-[inset_2px_2px_2px_0_rgba(0,0,0,0.25)] border-2 border-[#EFEFEF]"
+                >
+                    <p className="text-4xl">{linesOfCode}</p>
+                    <p className="text-xl leading-[0.625rem]">LOC</p>
+                </div>
+                <div
+                    className="flex flex-col justify-center items-center rounded-[5px] bg-neutral-100 w-1/2 py-[0.625rem]
+                                        shadow-[inset_2px_2px_2px_0_rgba(0,0,0,0.25)] border-2 border-[#EFEFEF]"
+                >
+                    <p className="text-4xl">{`${numOfCommits}+`}</p>
+                    <p className="text-xl leading-[0.625rem]">Commits</p>
+                </div>
+            </div>
+            {/* Links */}
+            <div className="flex flex-col gap-[0.625rem]">{children}</div>
+        </div>
+    )
+}
