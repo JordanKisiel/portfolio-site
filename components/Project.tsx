@@ -1,21 +1,19 @@
+import CroppedImage from "./CroppedImage"
+
 type Props = {
     title: string
-    image: string
-    imageSize: string
-    imagePosition: string
+    thumbnail: JSX.Element
     linesOfCode: number
     numOfCommits: number
-    children: JSX.Element
+    portfolioLinks: JSX.Element
 }
 
 export default function Project({
     title,
-    image,
-    imageSize,
-    imagePosition,
+    thumbnail,
     linesOfCode,
     numOfCommits,
-    children,
+    portfolioLinks,
 }: Props) {
     return (
         <div className="mb-20">
@@ -26,9 +24,7 @@ export default function Project({
             >
                 {title}
             </h3>
-            <div
-                className={`rounded-[5px] overflow-hidden w-full h-48 mb-[0.625rem] ${image} ${imageSize} ${imagePosition}`}
-            ></div>
+            {thumbnail}
 
             <div className="flex flex-row justify-between font-abhaya gap-[0.625rem] mb-[0.625rem]">
                 <div
@@ -47,7 +43,7 @@ export default function Project({
                 </div>
             </div>
             {/* Links */}
-            <div className="flex flex-col gap-[0.625rem]">{children}</div>
+            <div className="flex flex-col gap-[0.625rem]">{portfolioLinks}</div>
         </div>
     )
 }
