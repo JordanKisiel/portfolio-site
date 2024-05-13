@@ -8,6 +8,8 @@ import flairData from "@/data/flair.json"
 import rainbowArrow from "@/public/rainbow-arrow.svg"
 import PortfolioLink from "@/components/PortfolioLink"
 import Project from "@/components/Project"
+import TextureOverlay from "@/components/TextureOverlay"
+import CroppedImage from "@/components/CroppedImage"
 
 export default function Home() {
     let piecesOfFlair = flairData.flair.map((piece) => {
@@ -51,6 +53,7 @@ export default function Home() {
 
     return (
         <>
+            {/* TODO: have everything contained with a main element */}
             <Nav />
             {/* Intro */}
             <div className="flex flex-col items-center pt-20 gap-5 mb-10">
@@ -129,102 +132,110 @@ export default function Home() {
 
                 <Project
                     title="Kanban Project Management Tool"
-                    image="bg-[url('../public/kanban-mobile-thumb.png')]"
-                    imageSize="bg-[length:80rem]"
-                    imagePosition="bg-[-8rem_-3rem]"
+                    thumbnail={
+                        <CroppedImage
+                            image="bg-[url('../public/kanban-mobile-thumb.png')]"
+                            imageSize="bg-[length:80rem]"
+                            imagePosition="bg-[-8rem_-3rem]"
+                        />
+                    }
                     linesOfCode={4700}
                     numOfCommits={200}
-                >
-                    <>
-                        <PortfolioLink
-                            url="https://jordan-kisiel-kanban.vercel.app/"
-                            text="Live Site"
-                            textSize="text-[1.75rem]"
-                            arrowColor="#F1D7D7"
-                            bgColor="bg-red-400"
-                            icon="bg-[url('../public/screen-icon.svg')]"
-                            textColor="text-red-100"
-                            bgSize="bg-[length:2.25rem]"
-                        />
-                        <PortfolioLink
-                            url="https://github.com/JordanKisiel/kanban-task-manager"
-                            text="Github Repo"
-                            textSize="text-[1.75rem]"
-                            arrowColor="#E2ECEF"
-                            bgColor="bg-blue-400"
-                            icon="bg-[url('../public/repo-icon.svg')]"
-                            textColor="text-blue-100"
-                            bgSize="bg-[length:2.3rem]"
-                        />
-                        <PortfolioLink
-                            url="/kanban-breakdown"
-                            text="Detailed Breakdown"
-                            textSize="text-[1.5rem]"
-                            arrowColor="#F1E0E8"
-                            bgColor="bg-pink-400"
-                            icon="bg-[url('../public/detailed-breakdown-icon.svg')]"
-                            textColor="text-pink-100"
-                            bgSize="bg-[length:2rem]"
-                        />
-                    </>
-                </Project>
+                    portfolioLinks={
+                        <>
+                            <PortfolioLink
+                                url="https://jordan-kisiel-kanban.vercel.app/"
+                                text="Live Site"
+                                textSize="text-[1.75rem]"
+                                arrowColor="#F1D7D7"
+                                bgColor="bg-red-400"
+                                icon="bg-[url('../public/screen-icon.svg')]"
+                                textColor="text-red-100"
+                                bgSize="bg-[length:2.25rem]"
+                            />
+                            <PortfolioLink
+                                url="https://github.com/JordanKisiel/kanban-task-manager"
+                                text="Github Repo"
+                                textSize="text-[1.75rem]"
+                                arrowColor="#E2ECEF"
+                                bgColor="bg-blue-400"
+                                icon="bg-[url('../public/repo-icon.svg')]"
+                                textColor="text-blue-100"
+                                bgSize="bg-[length:2.3rem]"
+                            />
+                            <PortfolioLink
+                                url="/kanban-breakdown"
+                                text="Detailed Breakdown"
+                                textSize="text-[1.5rem]"
+                                arrowColor="#F1E0E8"
+                                bgColor="bg-pink-400"
+                                icon="bg-[url('../public/detailed-breakdown-icon.svg')]"
+                                textColor="text-pink-100"
+                                bgSize="bg-[length:2rem]"
+                            />
+                        </>
+                    }
+                />
 
                 <Project
                     title="Connect Four: AI & Online 2 Player"
-                    image="bg-[url('../public/connect-four-mobile-thumb.png')]"
-                    imageSize="bg-[length:38rem]"
-                    imagePosition="bg-[-9rem_-11rem]"
+                    thumbnail={
+                        <CroppedImage
+                            image="bg-[url('../public/connect-four-mobile-thumb.png')]"
+                            imageSize="bg-[length:38rem]"
+                            imagePosition="bg-[-9rem_-11rem]"
+                        />
+                    }
                     linesOfCode={4000}
                     numOfCommits={100}
-                >
-                    <>
-                        <PortfolioLink
-                            url="https://connect-four-next-client.vercel.app/"
-                            text="Live Site"
-                            textSize="text-[1.75rem]"
-                            arrowColor="#F1D7D7"
-                            bgColor="bg-red-400"
-                            icon="bg-[url('../public/screen-icon.svg')]"
-                            textColor="text-red-100"
-                            bgSize="bg-[length:2.25rem]"
-                        />
-                        <PortfolioLink
-                            url="https://github.com/JordanKisiel/connect-four-next"
-                            text="Client Repo"
-                            textSize="text-[1.75rem]"
-                            arrowColor="#E2ECEF"
-                            bgColor="bg-blue-400"
-                            icon="bg-[url('../public/repo-icon.svg')]"
-                            textColor="text-blue-100"
-                            bgSize="bg-[length:2.3rem]"
-                        />
-                        <PortfolioLink
-                            url="https://github.com/JordanKisiel/connect-four-next-server"
-                            text="Server Repo"
-                            textSize="text-[1.75rem]"
-                            arrowColor="#F1E0E8"
-                            bgColor="bg-orange-400"
-                            icon="bg-[url('../public/server-icon.svg')]"
-                            textColor="text-orange-100"
-                            bgSize="bg-[length:2.3rem]"
-                        />
-                        <PortfolioLink
-                            url="/connect-four-breakdown"
-                            text="Detailed Breakdown"
-                            textSize="text-[1.5rem]"
-                            arrowColor="#F1E0E8"
-                            bgColor="bg-pink-400"
-                            icon="bg-[url('../public/detailed-breakdown-icon.svg')]"
-                            textColor="text-pink-100"
-                            bgSize="bg-[length:2rem]"
-                        />
-                    </>
-                </Project>
+                    portfolioLinks={
+                        <>
+                            <PortfolioLink
+                                url="https://connect-four-next-client.vercel.app/"
+                                text="Live Site"
+                                textSize="text-[1.75rem]"
+                                arrowColor="#F1D7D7"
+                                bgColor="bg-red-400"
+                                icon="bg-[url('../public/screen-icon.svg')]"
+                                textColor="text-red-100"
+                                bgSize="bg-[length:2.25rem]"
+                            />
+                            <PortfolioLink
+                                url="https://github.com/JordanKisiel/connect-four-next"
+                                text="Client Repo"
+                                textSize="text-[1.75rem]"
+                                arrowColor="#E2ECEF"
+                                bgColor="bg-blue-400"
+                                icon="bg-[url('../public/repo-icon.svg')]"
+                                textColor="text-blue-100"
+                                bgSize="bg-[length:2.3rem]"
+                            />
+                            <PortfolioLink
+                                url="https://github.com/JordanKisiel/connect-four-next-server"
+                                text="Server Repo"
+                                textSize="text-[1.75rem]"
+                                arrowColor="#F1E0E8"
+                                bgColor="bg-orange-400"
+                                icon="bg-[url('../public/server-icon.svg')]"
+                                textColor="text-orange-100"
+                                bgSize="bg-[length:2.3rem]"
+                            />
+                            <PortfolioLink
+                                url="/connect-four-breakdown"
+                                text="Detailed Breakdown"
+                                textSize="text-[1.5rem]"
+                                arrowColor="#F1E0E8"
+                                bgColor="bg-pink-400"
+                                icon="bg-[url('../public/detailed-breakdown-icon.svg')]"
+                                textColor="text-pink-100"
+                                bgSize="bg-[length:2rem]"
+                            />
+                        </>
+                    }
+                />
             </div>
 
-            {/* texture overlay */}
-            {/* pointer-events-none allows clicks through the overlay */}
-            <div className="fixed inset-0 z-50 bg-[url('../public/star.png')] bg-[length:8px] opacity-5 pointer-events-none"></div>
+            <TextureOverlay />
         </>
     )
 }

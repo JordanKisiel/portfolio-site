@@ -21,8 +21,8 @@ export default function backHomeIcon({
                 <path
                     d="M14.1191 2.36581C14.8786 1.49785 15.9758 1 17.1292 1H61C63.2091 1 65 2.79086 65 5V32C65 34.2091 63.2091 36 61 36H17.1292C15.9759 36 14.8786 35.5021 14.1191 34.6342L2.30519 21.1342C0.985391 19.626 0.985393 17.374 2.30519 15.8658L14.1191 2.36581Z"
                     fill={backgroundColor}
-                    fill-opacity={`${foregroundOpacity}`}
-                    shape-rendering="crispEdges"
+                    fillOpacity={`${foregroundOpacity}`}
+                    shapeRendering="crispEdges"
                 />
             </g>
             <path
@@ -37,10 +37,10 @@ export default function backHomeIcon({
                     width="67.6847"
                     height="39"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
                     <feFlood
-                        flood-opacity="0"
+                        floodOpacity="0"
                         result="BackgroundImageFix"
                     />
                     <feColorMatrix
