@@ -1,14 +1,14 @@
 type Props = {
     children: string
     alignment: string
-    highlightIndex: number
+    highlightIndices: number[]
     highlightColor: string
 }
 
 export default function Heading({
     children,
     alignment,
-    highlightIndex,
+    highlightIndices,
     highlightColor,
 }: Props) {
     const characters = children.split("")
@@ -17,7 +17,9 @@ export default function Heading({
         return (
             <span
                 key={`${index}`}
-                className={`${highlightIndex === index && highlightColor}`}
+                className={`${
+                    highlightIndices.includes(index) && highlightColor
+                }`}
             >
                 {character}
             </span>
