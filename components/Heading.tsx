@@ -28,7 +28,7 @@ export default function Heading({
 
     return (
         <h2
-            className={`font-outfit text-neutral-900 text-4xl mb-5 ${alignment}`}
+            className={`font-outfit text-neutral-900 text-4xl mb-5 leading-8 ${alignment}`}
         >
             {charElements}
         </h2>
