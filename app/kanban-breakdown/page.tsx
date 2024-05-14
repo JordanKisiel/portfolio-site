@@ -18,6 +18,7 @@ import FeaturesListItem from "@/components/FeaturesListItem"
 import Paragraph from "@/components/Paragraph"
 import relationDiagram from "@/public/relation-diagram.svg"
 import dataRetrievalDiagram from "@/public/data-retrieval-diagram.svg"
+import CodeHightlight from "@/components/CodeHighlight"
 
 export default function Page() {
     return (
@@ -241,6 +242,56 @@ export default function Page() {
                     the data that it uses, mitigating the need for changes in my
                     app if the API or database changes.
                 </Paragraph>
+            </div>
+
+            <div className="mb-20">
+                <CodeHightlight title="Dynamic Inputs">
+                    <>
+                        <CroppedImage
+                            image="bg-[url('../public/edit-board-modal.png')]"
+                            imageSize="bg-[length:23rem]"
+                            imagePosition="bg-[-2rem_-8rem]"
+                            height="h-[14rem]"
+                        />
+                        <Paragraph alignment="text-left">
+                            The dynamic nature of the input lists used for
+                            columns and subtasks provided an extra challenge as
+                            multiple CRUD operations had to be performed in a
+                            single request: add, edit, and delete.
+                        </Paragraph>
+                        <CroppedImage
+                            image="bg-[url('../public/dynamic-input-data-shape.png')]"
+                            imageSize="bg-[length:19rem]"
+                            imagePosition="bg-[0rem_0rem]"
+                            height="h-[10rem]"
+                        />
+                        <Paragraph alignment="text-left">
+                            To accomplish this, I used the data shape above. An
+                            object with arrays for creation, updating, and
+                            deletion. Depending on the action taken by the user,
+                            multiple arrays could be updated, each with their
+                            own logic.
+                        </Paragraph>
+                        <CroppedImage
+                            image="bg-[url('../public/edit-column-logic.png')]"
+                            imageSize="bg-[length:28rem]"
+                            imagePosition="bg-[-3rem_-2.5rem]"
+                            height="h-[22rem]"
+                        />
+                        <Paragraph alignment="text-left">
+                            For instance, if the user edits a column, the
+                            “create” array is put through a map whose behavior
+                            is governed by the length of the “update” array
+                            because the “create” array always appears at the
+                            bottom of the dynamic list. The “update” array is
+                            mapped in the normal way for a change handler.
+                            Finally, the “delete” array is simply spread out
+                            with no mapping since it is never rendered (but it
+                            is sent to database for the deletion of the
+                            appropriate items!)
+                        </Paragraph>
+                    </>
+                </CodeHightlight>
             </div>
 
             <TextureOverlay />
