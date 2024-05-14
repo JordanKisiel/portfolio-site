@@ -284,7 +284,7 @@ export default function Page() {
                             is governed by the length of the “update” array
                             because the “create” array always appears at the
                             bottom of the dynamic list. The “update” array is
-                            mapped in the normal way for a change handler.
+                            mapped in the typical way for a change handler.
                             Finally, the “delete” array is simply spread out
                             with no mapping since it is never rendered (but it
                             is sent to database for the deletion of the
@@ -292,6 +292,37 @@ export default function Page() {
                         </Paragraph>
                     </>
                 </CodeHightlight>
+            </div>
+
+            <div className="flex flex-col gap-5 mb-20">
+                <Heading
+                    alignment="text-center"
+                    highlightIndices={[3]}
+                    highlightColor="text-blue-400"
+                >
+                    Auth
+                </Heading>
+                <CroppedImage
+                    image="bg-[url('../public/login.png')]"
+                    imageSize="bg-[length:30rem]"
+                    imagePosition="bg-[-4.5rem_-2.5rem]"
+                    height="h-48"
+                />
+                <Paragraph alignment="text-left">
+                    I chose NextAuth for it’s easy integration into Next.js
+                    projects and Github as the OAuth provider. When a new user
+                    signs in, a new UUID is created in User table of the
+                    database and is associated with the user’s email. On
+                    subsequent logins, the email is found in the database and
+                    the user is redirected to their boards. The UUID for the
+                    user can seen in the URL.
+                </Paragraph>
+                <CroppedImage
+                    image="bg-[url('../public/UUID.png')]"
+                    imageSize="bg-[length:40rem]"
+                    imagePosition="bg-[-13rem_-0rem]"
+                    height="h-24"
+                />
             </div>
 
             <TextureOverlay />
