@@ -325,6 +325,38 @@ export default function Page() {
                 />
             </div>
 
+            <div className="flex flex-col gap-5 mb-20">
+                <Heading
+                    alignment="text-center"
+                    highlightIndices={[5]}
+                    highlightColor="text-pink-400"
+                >
+                    Drag & Drop
+                </Heading>
+                <CroppedImage
+                    image="bg-[url('../public/dragndrop.gif')]"
+                    imageSize="bg-[length:55rem]"
+                    imagePosition="bg-[-10rem_-6rem]"
+                    height="h-48"
+                />
+                <Paragraph alignment="text-left">
+                    After some research, I chose dndkit to handle dragging &
+                    dropping of tasks. This was mostly due preferring the API
+                    over those of other React drag and drop options and the
+                    customization available with dndkit. To provide a better
+                    user experience and maintain data integrity, task grouping
+                    and ordering data is updated in the local cache (using
+                    TanStack Query) during dragging and is only synced to the
+                    database when the user finishes dragging. In the event of an
+                    error, tasks are rolled back to their previous positions.
+                    The user is also prevented from dragging again until task
+                    data is retrieved from the server. This isn't ideal, but an
+                    ideal solution seemed like it would've added a lot of
+                    complexity and dev time so I decided to go with the simpler
+                    solution.
+                </Paragraph>
+            </div>
+
             <TextureOverlay />
         </main>
     )
