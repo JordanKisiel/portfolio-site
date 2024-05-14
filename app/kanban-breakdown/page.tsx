@@ -1,3 +1,4 @@
+import Image from "next/image"
 import BackHomeLink from "@/components/BackHomeLink"
 import TextureOverlay from "@/components/TextureOverlay"
 import CroppedImage from "@/components/CroppedImage"
@@ -14,6 +15,9 @@ import LabeledContainer from "@/components/LabeledContainer"
 import Heading from "@/components/Heading"
 import FeaturesList from "@/components/FeaturesList"
 import FeaturesListItem from "@/components/FeaturesListItem"
+import Paragraph from "@/components/Paragraph"
+import relationDiagram from "@/public/relation-diagram.svg"
+import dataRetrievalDiagram from "@/public/data-retrieval-diagram.svg"
 
 export default function Page() {
     return (
@@ -41,12 +45,12 @@ export default function Page() {
                 >
                     What is it?
                 </Heading>
-                <p className="font-abhaya text-neutral-900 text-xl font-semibold">
+                <Paragraph alignment="text-left">
                     This project is my web app implementation of a Kanban board.
                     It allows the user to organize their tasks for different
                     projects in 2 dimensions: vertically by priority and
                     horizontally by status.
-                </p>
+                </Paragraph>
             </div>
             <div className="mb-20">
                 <LabeledContainer
@@ -152,7 +156,7 @@ export default function Page() {
                     </div>
                 </LabeledContainer>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 mb-20">
                 <Heading
                     alignment="text-center"
                     highlightIndices={[6, 7]}
@@ -189,6 +193,54 @@ export default function Page() {
                     height="h-[20rem]"
                     colorOverlay="bg-blue-400"
                 />
+            </div>
+
+            <div className="flex flex-col gap-3 mb-20">
+                <Heading
+                    alignment="text-center"
+                    highlightIndices={[5]}
+                    highlightColor="text-purple-400"
+                >
+                    Data Modeling
+                </Heading>
+                <Paragraph alignment="text-left">
+                    The data in this project was largely relational one-to-many
+                    relationships: one user has many boards, one board has many
+                    columns, etc.
+                </Paragraph>
+                <Image
+                    className="my-10"
+                    src={relationDiagram}
+                    alt="Relation diagram for the Kanban app"
+                />
+                <Paragraph alignment="text-left">
+                    For this reason, I chose to use a PostgreSQL database as it
+                    seemed to be a solid, well-known option as a relational
+                    database.
+                </Paragraph>
+            </div>
+
+            <div className="flex flex-col gap-3 mb-20">
+                <Heading
+                    alignment="text-center"
+                    highlightIndices={[5]}
+                    highlightColor="text-red-400"
+                >
+                    Data Retrieval
+                </Heading>
+                <Image
+                    className="my-5"
+                    src={dataRetrievalDiagram}
+                    alt="Data retrieval diagram for Kanban app"
+                />
+                <Paragraph alignment="text-left">
+                    I used data utility functions that wrapped axios requests to
+                    an API layer. In the API route handlers, I used Prisma to
+                    retrieve the data from the db. The abstraction of the data
+                    util functions creates a clear separation between my app and
+                    the data that it uses, mitigating the need for changes in my
+                    app if the API or database changes.
+                </Paragraph>
             </div>
 
             <TextureOverlay />
