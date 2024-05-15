@@ -19,6 +19,8 @@ import Paragraph from "@/components/Paragraph"
 import relationDiagram from "@/public/relation-diagram.svg"
 import dataRetrievalDiagram from "@/public/data-retrieval-diagram.svg"
 import CodeHightlight from "@/components/CodeHighlight"
+import BackToTopIcon from "@/components/BackToTopIcon"
+import BackToTopButton from "@/components/BackToTopButton"
 
 export default function Page() {
     return (
@@ -325,7 +327,7 @@ export default function Page() {
                 />
             </div>
 
-            <div className="flex flex-col gap-5 mb-20">
+            <div className="flex flex-col gap-5 mb-32">
                 <Heading
                     alignment="text-center"
                     highlightIndices={[5]}
@@ -356,6 +358,8 @@ export default function Page() {
                     solution.
                 </Paragraph>
             </div>
+
+            <BackToTopButton />
 
             <TextureOverlay />
         </main>
