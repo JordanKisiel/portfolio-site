@@ -5,9 +5,9 @@ export default function BackHomeLink() {
     return (
         <Link href="/">
             <BackHomeIcon
-                foregroundColor="#F1D7D7"
-                foregroundOpacity={0.5}
-                backgroundColor="#EE7C7D"
+                foregroundColor="#161616"
+                foregroundOpacity={0.25}
+                backgroundColor="#E2ECEF"
             />
         </Link>
     )
