@@ -54,7 +54,9 @@ export default function Home() {
     return (
         <>
             {/* TODO: have everything contained with a main element */}
-            {/* Check why the nav goes off the screen on laptop but is fine on desktop */}
+            {/* TODO: Check why the nav goes off the screen on laptop but is fine on desktop */}
+            {/* TODO: make sure there's not a z-index issue with nav */}
+            {/* TODO: make nav fill screen on mobile and get nav links to work */}
             <Nav />
             {/* Intro */}
             <div className="flex flex-col items-center pt-20 gap-5 mb-10">
