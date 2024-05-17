@@ -1,6 +1,5 @@
 import Image from "next/image"
 import picOfMe from "@/public/pic-of-me.png"
-import IntroText from "@/components/IntroText"
 
 export default function Photo() {
     return (
@@ -10,6 +9,7 @@ export default function Photo() {
                 className="absolute inset-0 blur-[10px] opacity-50 mix-blend-darken"
                 src={picOfMe}
                 alt="Photograph of Jordan Kisiel's face"
+                priority={true}
             />
             <Image
                 src={picOfMe}
