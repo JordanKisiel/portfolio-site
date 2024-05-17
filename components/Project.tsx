@@ -16,15 +16,17 @@ export default function Project({
     portfolioLinks,
 }: Props) {
     return (
-        <div className="mb-20">
-            <h3
-                className="font-amiko text-neutral-900 text-2xl leading-6 text-center uppercase bg-neutral-100 
+        <div className="flex flex-col mb-20">
+            <div className="mb-[0.625rem]">
+                <h3
+                    className="font-amiko text-neutral-900 text-2xl leading-6 text-center uppercase bg-neutral-100 
                                    rounded-[5px] shadow-[inset_2px_2px_2px_0_rgba(0,0,0,0.25)] border-2 border-[#EFEFEF]
                                    pt-3 pb-2 mb-[0.625rem]"
-            >
-                {title}
-            </h3>
-            {thumbnail}
+                >
+                    {title}
+                </h3>
+                {thumbnail}
+            </div>
 
             <div className="flex flex-row justify-between font-abhaya gap-[0.625rem] mb-[0.625rem]">
                 <div
