@@ -35,8 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# text files
-*.txt
-
 # design files
 /.design
