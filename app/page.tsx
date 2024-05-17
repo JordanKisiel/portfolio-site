@@ -53,10 +53,6 @@ export default function Home() {
 
     return (
         <>
-            {/* TODO: have everything contained with a main element */}
-            {/* TODO: Check why the nav goes off the screen on laptop but is fine on desktop */}
-            {/* TODO: make sure there's not a z-index issue with nav */}
-            {/* TODO: make nav fill screen on mobile and get nav links to work */}
             <Nav />
             {/* Intro */}
             <div className="flex flex-col items-center pt-20 gap-5 mb-10">
@@ -83,7 +79,6 @@ export default function Home() {
                             className="flex flex-col font-abhaya font-semibold text-lg bg-blue-100 p-5 
                                       rounded-[5px] gap-5 -rotate-[4deg]"
                         >
-                            {/* TODO: also consider making this link copy the email address for pasting? */}
                             <ContactListLink
                                 bgIcon="bg-[url('../public/email-icon.svg')]"
                                 linkUrl="mailto:jordan.kisiel@gmail.com"
@@ -99,7 +94,6 @@ export default function Home() {
                                 linkUrl="https://github.com/JordanKisiel"
                                 text="Github"
                             />
-                            {/* TODO: add google doc link to resume */}
                             <ContactListLink
                                 bgIcon="bg-[url('../public/resume-icon.svg')]"
                                 linkUrl="#"

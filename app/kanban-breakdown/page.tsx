@@ -99,7 +99,6 @@ export default function Page() {
                     bgColor="bg-orange-400"
                 >
                     <div className="grid grid-cols-3 w-full gap-5">
-                        {/* TODO: Fill in tech info */}
                         <TechUsed
                             logo={nextLogo}
                             logoSize={60}

@@ -14,7 +14,6 @@ export default function Page() {
                         Player vs AI & <br /> Online 2 Player
                     </span>
                 </h1>
-                {/* TODO: replace with Connect Four image */}
                 <CroppedImage
                     image="bg-[url('../public/kanban-mobile-thumb.png')]"
                     imageSize="bg-[length:80rem]"

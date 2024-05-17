@@ -1,0 +1,9 @@
+TODO:
+  -  do the mobile verison of connect four breakdown page
+  -  have everything contained with a main element on home page
+  -  Check why the home page nav goes off the screen on laptop but is fine on desktop 
+  -  make sure there's not a z-index issue with the homepage nav 
+  -  make homepage nav fill screen on mobile and get nav links to work 
+  -  consider making email link copy the email address for pasting
+     -research best modern practice for email links
+  -  add google doc link to resume on homepage
