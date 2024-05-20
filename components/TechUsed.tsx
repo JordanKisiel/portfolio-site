@@ -6,22 +6,15 @@ type Props = {
     logoAlt: string
     logoSize: number
     label: string
-    paddingY: string
 }
 
-export default function TechUsed({
-    logo,
-    logoAlt,
-    logoSize,
-    label,
-    paddingY,
-}: Props) {
+export default function TechUsed({ logo, logoAlt, logoSize, label }: Props) {
     return (
         <div className="w-full">
             <div
                 className={`flex flex-row justify-center items-center bg-orange-100 rounded-[4px] 
                 w-full border-[1px] border-[#EFEFEF] shadow-[inset_2px_2px_2px_0_rgba(0,0,0,0.25)] 
-                max-h-12 mb-2 ${paddingY}`}
+                min-h-12 mb-2`}
             >
                 <Image
                     src={logo}
