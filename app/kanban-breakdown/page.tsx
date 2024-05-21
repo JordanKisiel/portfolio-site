@@ -104,56 +104,48 @@ export default function Page() {
                             logoSize={60}
                             logoAlt="Next.js logo"
                             label="Framework"
-                            paddingY="py-5"
                         />
                         <TechUsed
                             logo={typescriptLogo}
                             logoSize={30}
                             logoAlt="Typescript logo"
                             label="Language"
-                            paddingY="py-4"
                         />
                         <TechUsed
                             logo={tanstackQueryLogo}
                             logoSize={60}
                             logoAlt="Tanstack Query logo"
                             label="Data Management"
-                            paddingY="py-6"
                         />
                         <TechUsed
                             logo={postgresqlLogo}
                             logoSize={70}
                             logoAlt="PostgreSQL logo"
                             label="Database"
-                            paddingY="py-6"
                         />
                         <TechUsed
                             logo={prismaLogo}
                             logoSize={60}
                             logoAlt="Prisma logo"
                             label="ORM"
-                            paddingY="py-6"
                         />
                         <TechUsed
                             logo={nextAuthLogo}
                             logoSize={70}
                             logoAlt="NextAuth.js logo"
                             label="Auth"
-                            paddingY="py-6"
                         />
                         <TechUsed
                             logo={tailwindLogo}
                             logoSize={70}
                             logoAlt="Tailwind logo"
                             label="Styling"
-                            paddingY="py-6"
                         />
                         <TechUsed
                             logo={dndkitLogo}
                             logoSize={70}
                             logoAlt="dndkit logo"
                             label="Drag & Drop"
-                            paddingY="py-6"
                         />
                     </div>
                 </LabeledContainer>
