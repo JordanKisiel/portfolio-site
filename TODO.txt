@@ -1,7 +1,4 @@
 TODO:
-  -  Check why pic of me component isn't working on mobile
-  -  make sure there's not a z-index issue with the homepage nav 
-  -  make homepage nav fill screen on mobile and get nav links to work 
   -  consider making email link copy the email address for pasting
      -research best modern practice for email links
   -  add google doc link to resume on homepage

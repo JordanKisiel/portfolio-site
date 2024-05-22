@@ -78,6 +78,7 @@ export default function Home() {
                         <ul
                             className="flex flex-col font-abhaya font-semibold text-lg bg-blue-100 p-5 
                                       rounded-[5px] gap-5 -rotate-[4deg]"
+                            id="contact"
                         >
                             <ContactListLink
                                 bgIcon="bg-[url('../public/email-icon.svg')]"
@@ -105,7 +106,10 @@ export default function Home() {
             </div>
 
             {/* About Me */}
-            <div className="flex flex-col items-center mx-5 gap-5 mb-40">
+            <div
+                className="flex flex-col items-center mx-5 gap-5 mb-40"
+                id="about"
+            >
                 <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5">
                     About Me
                 </h2>
@@ -117,6 +121,7 @@ export default function Home() {
                 <div
                     className="flex flex-col items-center bg-[url('../public/portfolio-bg.svg')] bg-no-repeat 
                                 pt-3 pb-20 bg-top mb-10"
+                    id="portfolio"
                 >
                     <h2 className="font-outfit text-neutral-900 text-4xl text-center mb-5">
                         Portfolio
