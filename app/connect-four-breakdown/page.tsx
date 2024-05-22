@@ -21,7 +21,7 @@ import formulaDiagram from "@/public/connect-four-formula-diagram.svg"
 
 export default function Page() {
     return (
-        <main className="w-full px-5 pt-5">
+        <main className="w-full px-5 pt-5 overflow-x-hidden">
             <BackHomeLink />
             <div className="flex flex-col gap-5 mb-10">
                 <h1 className="font-outfit text-center mt-10">

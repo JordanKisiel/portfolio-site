@@ -52,7 +52,7 @@ export default function Home() {
     ]
 
     return (
-        <>
+        <main className="relative overflow-x-hidden">
             <Nav />
             {/* Intro */}
             <div className="flex flex-col items-center pt-20 gap-5 mb-10">
@@ -235,6 +235,6 @@ export default function Home() {
             </div>
 
             <TextureOverlay />
-        </>
+        </main>
     )
 }
