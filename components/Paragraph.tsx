@@ -6,7 +6,7 @@ type Props = {
 export default function Paragraph({ alignment, children }: Props) {
     return (
         <p
-            className={`font-abhaya text-neutral-900 text-xl font-semibold ${alignment}`}
+            className={`font-abhaya text-neutral-900 text-xl font-semibold text-pretty ${alignment}`}
         >
             {children}
         </p>
