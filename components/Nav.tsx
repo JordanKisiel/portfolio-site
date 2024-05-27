@@ -23,7 +23,11 @@ export default function Nav() {
     }, [isOpen])
 
     return (
-        <div className={`inset-0 z-10 ${isOpen ? "fixed" : "absolute"}`}>
+        <div
+            className={`inset-0 z-10 ${
+                isOpen ? "fixed" : "absolute pointer-events-none"
+            }`}
+        >
             <button
                 onClick={() => toggleOpen()}
                 className={`absolute right-5 top-5 bg-no-repeat w-[2.25rem] pb-4 z-10 ${
