@@ -1,12 +1,32 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
+
+gsap.registerPlugin(useGSAP)
 
 export default function Nav() {
     const [isOpen, setIsOpen] = useState(false)
 
-    function toggleOpen() {
+    const navContainer = useRef<HTMLDivElement>(null)
+
+    console.log(isOpen)
+
+    function toggleOpen(isOpen: boolean) {
         setIsOpen((prevValue) => !prevValue)
+
+        if (isOpen) {
+            //close animation
+            gsap.to(navContainer.current, {
+                height: 0,
+            })
+        } else {
+            //open animation
+            gsap.to(navContainer.current, {
+                height: "100%",
+            })
+        }
     }
 
     //stop scrolling when nav is open
@@ -24,12 +44,13 @@ export default function Nav() {
 
     return (
         <div
+            ref={navContainer}
             className={`z-10 ${
                 isOpen ? "fixed inset-0" : "absolute top-0 left-0 right-0"
             }`}
         >
             <button
-                onClick={() => toggleOpen()}
+                onClick={() => toggleOpen(isOpen)}
                 className={`absolute right-5 top-5 bg-no-repeat w-[2.25rem] pb-4 z-10 ${
                     isOpen
                         ? "bg-[url('../public/hamburger-close-icon.svg')]"
@@ -46,7 +67,7 @@ export default function Nav() {
                     <ul className="flex flex-col gap-3">
                         <li>
                             <a
-                                onClick={() => toggleOpen()}
+                                onClick={() => toggleOpen(isOpen)}
                                 href="#contact"
                             >
                                 Contact
@@ -54,7 +75,7 @@ export default function Nav() {
                         </li>
                         <li>
                             <a
-                                onClick={() => toggleOpen()}
+                                onClick={() => toggleOpen(isOpen)}
                                 href="#about"
                             >
                                 About Me
@@ -62,7 +83,7 @@ export default function Nav() {
                         </li>
                         <li>
                             <a
-                                onClick={() => toggleOpen()}
+                                onClick={() => toggleOpen(isOpen)}
                                 href="#portfolio"
                             >
                                 Portfolio

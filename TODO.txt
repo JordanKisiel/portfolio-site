@@ -1,6 +1,7 @@
 TODO:
-  -  convert gradient stroke on name intro to a gradient bg clipped by a shape
-  -  consider making email link copy the email address for pasting
-     -research best modern practice for email links
-  -  add google doc link to resume on homepage
   -  add animation to nav menu
+    -  fix issues with animation:
+      - doesn't animate on first open
+      - doesn't animate on close
+  -  add google doc link to resume on homepage
+  
