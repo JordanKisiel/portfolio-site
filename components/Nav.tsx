@@ -9,7 +9,7 @@ gsap.registerPlugin(useGSAP)
 export default function Nav() {
     const [isOpen, setIsOpen] = useState(false)
 
-    const navContainer = useRef<HTMLDivElement>(null)
+    const navContainer = useRef<HTMLElement>(null)
 
     console.log(isOpen)
 
@@ -43,15 +43,10 @@ export default function Nav() {
     }, [isOpen])
 
     return (
-        <div
-            ref={navContainer}
-            className={`z-10 ${
-                isOpen ? "fixed inset-0" : "absolute top-0 left-0 right-0"
-            }`}
-        >
+        <div>
             <button
                 onClick={() => toggleOpen(isOpen)}
-                className={`absolute right-5 top-5 bg-no-repeat w-[2.25rem] pb-4 z-10 ${
+                className={`absolute right-5 top-5 bg-no-repeat w-[2.25rem] pb-4 z-20 ${
                     isOpen
                         ? "bg-[url('../public/hamburger-close-icon.svg')]"
                         : "bg-[url('../public/hamburger-icon.svg')]"
@@ -59,42 +54,41 @@ export default function Nav() {
             >
                 <span className="invisible text-[1px]">Open nav menu</span>
             </button>
-            {isOpen && (
-                <nav
-                    className="absolute inset-0 flex flex-col items-center justify-center bg-red-400 py-[80px]
-                                font-amiko text-2xl uppercase text-neutral-900"
-                >
-                    <ul className="flex flex-col gap-3">
-                        <li>
-                            <a
-                                onClick={() => toggleOpen(isOpen)}
-                                href="#contact"
-                            >
-                                Contact
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                onClick={() => toggleOpen(isOpen)}
-                                href="#about"
-                            >
-                                About Me
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                onClick={() => toggleOpen(isOpen)}
-                                href="#portfolio"
-                            >
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Resume</a>
-                        </li>
-                    </ul>
-                </nav>
-            )}
+            <nav
+                ref={navContainer}
+                className={`fixed inset-0 flex flex-col items-center justify-center bg-red-400
+                                font-amiko text-2xl uppercase text-neutral-900 overflow-hidden h-0 z-10`}
+            >
+                <ul className="flex flex-col gap-3">
+                    <li>
+                        <a
+                            onClick={() => toggleOpen(isOpen)}
+                            href="#contact"
+                        >
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            onClick={() => toggleOpen(isOpen)}
+                            href="#about"
+                        >
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            onClick={() => toggleOpen(isOpen)}
+                            href="#portfolio"
+                        >
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Resume</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     )
 }
