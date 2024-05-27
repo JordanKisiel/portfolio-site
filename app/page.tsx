@@ -1,15 +1,14 @@
-import Image from "next/image"
 import Nav from "@/components/Nav"
 import IntroText from "@/components/IntroText"
 import Photo from "@/components/Photo"
 import ContactListLink from "@/components/ContactListLink"
 import Flair from "@/components/Flair"
 import flairData from "@/data/flair.json"
-import rainbowArrow from "@/public/rainbow-arrow.svg"
 import PortfolioLink from "@/components/PortfolioLink"
 import Project from "@/components/Project"
 import TextureOverlay from "@/components/TextureOverlay"
 import CroppedImage from "@/components/CroppedImage"
+import RainbowArrow from "@/components/RainbowArrow"
 
 export default function Home() {
     let piecesOfFlair = flairData.flair.map((piece) => {
@@ -126,10 +125,7 @@ export default function Home() {
                     <h2 className="font-outfit text-neutral-900 text-4xl text-center mb-5">
                         Portfolio
                     </h2>
-                    <Image
-                        src={rainbowArrow}
-                        alt="rainbow arrow pointing down"
-                    />
+                    <RainbowArrow />
                 </div>
 
                 <Project
