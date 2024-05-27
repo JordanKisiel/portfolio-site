@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Arrow from "@/components/Arrow"
 
@@ -12,7 +14,7 @@ type Props = {
     bgSize: string
 }
 
-export default function ({
+export default function PortfolioLink({
     url,
     text,
     textSize,
