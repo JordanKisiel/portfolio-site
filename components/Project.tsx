@@ -1,5 +1,3 @@
-import CroppedImage from "./CroppedImage"
-
 type Props = {
     title: string
     thumbnail: JSX.Element
