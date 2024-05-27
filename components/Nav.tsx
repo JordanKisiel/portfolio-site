@@ -24,8 +24,8 @@ export default function Nav() {
 
     return (
         <div
-            className={`inset-0 z-10 ${
-                isOpen ? "fixed" : "absolute pointer-events-none"
+            className={`z-10 ${
+                isOpen ? "fixed inset-0" : "absolute top-0 left-0 right-0"
             }`}
         >
             <button
