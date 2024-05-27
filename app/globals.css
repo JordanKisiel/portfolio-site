@@ -7,16 +7,26 @@
         clip-path: url("#introClip");
         background: linear-gradient(
             -25deg,
-            #ee7c7d 0% 10%,
-            #f5ac7f 10.1% 20%,
-            #61c4e1 20.1% 30%,
-            #d973a3 30.1% 40%,
-            #8054c4 40.1% 50%,
-            #ee7c7d 50.1% 60%,
-            #f5ac7f 60.1% 70%,
-            #61c4e1 70.1% 80%,
-            #d973a3 80.1% 90%,
-            #8054c4 90.1% 100%
+            #ee7c7d 0% 5%,
+            #f5ac7f 5.1% 10%,
+            #61c4e1 10.1% 15%,
+            #d973a3 15.1% 20%,
+            #f5ac7f 20.1% 25%,
+            #ee7c7d 25.1% 30%,
+            #f5ac7f 30.1% 35%,
+            #61c4e1 35.1% 40%,
+            #d973a3 40.1% 45%,
+            #f5ac7f 45.1% 50%,
+            #ee7c7d 50.1% 55%,
+            #f5ac7f 55.1% 60%,
+            #61c4e1 60.1% 65%,
+            #d973a3 65.1% 70%,
+            #f5ac7f 70.1% 75%,
+            #ee7c7d 75.1% 80%,
+            #f5ac7f 80.1% 85%,
+            #61c4e1 85.1% 90%,
+            #d973a3 90.1% 95%,
+            #f5ac7f 95.1% 100%
         );
         background-size: 250% 250%;
         animation: gradient 15s linear infinite;
@@ -30,15 +40,15 @@
             #f5ac7f 10.1% 20%,
             #61c4e1 20.1% 30%,
             #d973a3 30.1% 40%,
-            #8054c4 40.1% 50%,
+            #f5ac7f 40.1% 50%,
             #ee7c7d 50.1% 60%,
             #f5ac7f 60.1% 70%,
             #61c4e1 70.1% 80%,
             #d973a3 80.1% 90%,
-            #8054c4 90.1% 100%
+            #f5ac7f 90.1% 100%
         );
         background-size: 250% 250%;
-        animation: gradient 5s linear infinite;
+        animation: gradient 8s linear infinite;
     }
 
     @keyframes gradient {
