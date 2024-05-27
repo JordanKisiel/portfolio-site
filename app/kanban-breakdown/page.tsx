@@ -343,10 +343,10 @@ export default function Page() {
                     database when the user finishes dragging. In the event of an
                     error, tasks are rolled back to their previous positions.
                     The user is also prevented from dragging again until task
-                    data is retrieved from the server. This isn't ideal, but an
-                    ideal solution seemed like it would've added a lot of
-                    complexity and dev time so I decided to go with the simpler
-                    solution.
+                    data is retrieved from the server. This isn&apos;t ideal,
+                    but an ideal solution seemed like it would&apos;ve added a
+                    lot of complexity and dev time so I decided to go with the
+                    simpler solution.
                 </Paragraph>
             </div>
 
