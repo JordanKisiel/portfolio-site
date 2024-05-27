@@ -10,7 +10,7 @@ export default function ContactListLink({ bgIcon, linkUrl, text }: Props) {
     return (
         <li className="block w-full">
             <Link
-                className={`${bgIcon} bg-no-repeat bg-left pl-8 block w-4/5`}
+                className={`${bgIcon} block bg-no-repeat bg-left pl-8 w-4/5 pt-1`}
                 href={linkUrl}
             >
                 {text}
