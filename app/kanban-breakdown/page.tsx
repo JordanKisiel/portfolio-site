@@ -19,7 +19,6 @@ import Paragraph from "@/components/Paragraph"
 import relationDiagram from "@/public/relation-diagram.svg"
 import dataRetrievalDiagram from "@/public/data-retrieval-diagram.svg"
 import CodeHightlight from "@/components/CodeHighlight"
-import BackToTopIcon from "@/components/BackToTopIcon"
 import BackToTopButton from "@/components/BackToTopButton"
 
 export default function Page() {

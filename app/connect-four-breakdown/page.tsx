@@ -1,6 +1,8 @@
 import Image from "next/image"
 import BackHomeLink from "@/components/BackHomeLink"
 import CroppedImage from "@/components/CroppedImage"
+import BackToTopButton from "@/components/BackToTopButton"
+import TextureOverlay from "@/components/TextureOverlay"
 import Heading from "@/components/Heading"
 import Paragraph from "@/components/Paragraph"
 import LabeledContainer from "@/components/LabeledContainer"
@@ -34,8 +36,8 @@ export default function Page() {
                 </h1>
                 <CroppedImage
                     image="bg-[url('../public/connect-four-game.png')]"
-                    imageSize="bg-[length:22rem]"
-                    imagePosition="bg-[-0.5rem_-8rem]"
+                    imageSize="bg-[length:110%]"
+                    imagePosition="bg-[35%_35%]"
                     height="h-48"
                 />
             </div>
@@ -140,24 +142,24 @@ export default function Page() {
                 </Heading>
                 <CroppedImage
                     image="bg-[url('../public/connect-four-menu.png')]"
-                    imageSize="bg-[length:21rem]"
-                    imagePosition="bg-[0rem_0rem]"
+                    imageSize="bg-[length:100%]"
+                    imagePosition="bg-[0%_0%]"
                     imageOpacity="opacity-60"
                     height="h-[23rem]"
                     colorOverlay="bg-orange-400"
                 />
                 <CroppedImage
                     image="bg-[url('../public/connect-four-lobby.png')]"
-                    imageSize="bg-[length:21rem]"
-                    imagePosition="bg-[0rem_0rem]"
+                    imageSize="bg-[length:100%]"
+                    imagePosition="bg-[0%_0%]"
                     imageOpacity="opacity-60"
                     height="h-[32.5rem]"
                     colorOverlay="bg-blue-400"
                 />
                 <CroppedImage
                     image="bg-[url('../public/connect-four-game.png')]"
-                    imageSize="bg-[length:21.25rem]"
-                    imagePosition="bg-[0rem_0rem]"
+                    imageSize="bg-[length:101%]"
+                    imagePosition="bg-[0%_0%]"
                     imageOpacity="opacity-60"
                     height="h-[36rem]"
                     colorOverlay="bg-red-400"
@@ -268,9 +270,9 @@ export default function Page() {
                 </Heading>
                 <CroppedImage
                     image="bg-[url('../public/connect-four-menu-anim.gif')]"
-                    imageSize="bg-[length:22rem]"
-                    imagePosition="bg-[-0.7rem_0rem]"
-                    height="h-[31rem]"
+                    imageSize="bg-[length:100%]"
+                    imagePosition="bg-[0%_0%]"
+                    height="h-[30rem]"
                 />
                 <Paragraph alignment="text-left">
                     Most parts of the app are animated to reinforce the idea of
@@ -289,8 +291,8 @@ export default function Page() {
                     <>
                         <CroppedImage
                             image="bg-[url('../public/connect-four-disc-drop.gif')]"
-                            imageSize="bg-[length:18.25rem]"
-                            imagePosition="bg-[0rem_-3.75rem]"
+                            imageSize="bg-[length:100%]"
+                            imagePosition="bg-[0%_38%]"
                             height="h-[17rem]"
                         />
                         <Paragraph alignment="text-left">
@@ -314,6 +316,10 @@ export default function Page() {
                     </>
                 </CodeHightlight>
             </div>
+
+            <BackToTopButton />
+
+            <TextureOverlay />
         </main>
     )
 }
