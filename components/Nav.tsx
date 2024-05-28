@@ -11,8 +11,6 @@ export default function Nav() {
 
     const navContainer = useRef<HTMLElement>(null)
 
-    console.log(isOpen)
-
     function toggleOpen(isOpen: boolean) {
         setIsOpen((prevValue) => !prevValue)
 
@@ -20,6 +18,7 @@ export default function Nav() {
             //close animation
             gsap.to(navContainer.current, {
                 height: 0,
+                duration: 0.4,
             })
         } else {
             //open animation
