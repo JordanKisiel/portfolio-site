@@ -133,8 +133,8 @@ export default function Home() {
                     thumbnail={
                         <CroppedImage
                             image="bg-[url('../public/kanban-mobile-thumb.png')]"
-                            imageSize="bg-[length:80rem]"
-                            imagePosition="bg-[-8rem_-3rem]"
+                            imageSize="bg-[length:400%]"
+                            imagePosition="bg-[13%_8%]"
                             height="h-[12rem]"
                             isAnimatedOverlay={true}
                         />
@@ -182,8 +182,8 @@ export default function Home() {
                     thumbnail={
                         <CroppedImage
                             image="bg-[url('../public/connect-four-mobile-thumb.png')]"
-                            imageSize="bg-[length:38rem]"
-                            imagePosition="bg-[-9rem_-11rem]"
+                            imageSize="bg-[length:200%]"
+                            imagePosition="bg-[45%_30%]"
                             height="h-[12rem]"
                             isAnimatedOverlay={true}
                         />

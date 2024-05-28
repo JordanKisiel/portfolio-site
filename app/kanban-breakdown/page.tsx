@@ -35,8 +35,8 @@ export default function Page() {
                 </h1>
                 <CroppedImage
                     image="bg-[url('../public/kanban-mobile-thumb.png')]"
-                    imageSize="bg-[length:80rem]"
-                    imagePosition="bg-[-8rem_-3rem]"
+                    imageSize="bg-[length:300%]"
+                    imagePosition="bg-[0%_0%]"
                     height="h-48"
                 />
             </div>
@@ -160,30 +160,30 @@ export default function Page() {
                 </Heading>
                 <CroppedImage
                     image="bg-[url('../public/kanban-mobile-header.png')]"
-                    imageSize="bg-[length:25rem]"
-                    imagePosition="bg-[-2.3rem_-0.5rem]"
+                    imageSize="bg-[length:110%]"
+                    imagePosition="bg-[0%_75%]"
                     imageOpacity="opacity-60"
                     height="h-12"
                     colorOverlay="bg-purple-400"
                 />
                 <CroppedImage
                     image="bg-[url('../public/kanban-mobile-sidebar.png')]"
-                    imageSize="bg-[length:21rem]"
-                    imagePosition="bg-[0rem_0rem]"
+                    imageSize="bg-[length:100%]"
+                    imagePosition="bg-[0%_0%]"
                     height="h-[20.5rem]"
                     colorOverlay="bg-pink-400"
                 />
                 <CroppedImage
                     image="bg-[url('../public/kanban-mobile-thumb.png')]"
-                    imageSize="bg-[length:80rem]"
-                    imagePosition="bg-[-8rem_-3rem]"
+                    imageSize="bg-[length:300%]"
+                    imagePosition="bg-[15%_25%]"
                     height="h-[24rem]"
                     colorOverlay="bg-red-400"
                 />
                 <CroppedImage
                     image="bg-[url('../public/kanban-mobile-modals.png')]"
-                    imageSize="bg-[length:30rem]"
-                    imagePosition="bg-[-0.5rem_0rem]"
+                    imageSize="bg-[length:140%]"
+                    imagePosition="bg-[0%_0%]"
                     height="h-[20rem]"
                     colorOverlay="bg-blue-400"
                 />
@@ -242,8 +242,8 @@ export default function Page() {
                     <>
                         <CroppedImage
                             image="bg-[url('../public/edit-board-modal.png')]"
-                            imageSize="bg-[length:23rem]"
-                            imagePosition="bg-[-2rem_-8rem]"
+                            imageSize="bg-[length:125%]"
+                            imagePosition="bg-[45%_60%]"
                             height="h-[14rem]"
                         />
                         <Paragraph alignment="text-left">
@@ -254,8 +254,8 @@ export default function Page() {
                         </Paragraph>
                         <CroppedImage
                             image="bg-[url('../public/dynamic-input-data-shape.png')]"
-                            imageSize="bg-[length:19rem]"
-                            imagePosition="bg-[0rem_0rem]"
+                            imageSize="bg-[length:100%]"
+                            imagePosition="bg-[0%_0%]"
                             height="h-[10rem]"
                         />
                         <Paragraph alignment="text-left">
@@ -267,8 +267,8 @@ export default function Page() {
                         </Paragraph>
                         <CroppedImage
                             image="bg-[url('../public/edit-column-logic.png')]"
-                            imageSize="bg-[length:28rem]"
-                            imagePosition="bg-[-3rem_-2.5rem]"
+                            imageSize="bg-[length:150%]"
+                            imagePosition="bg-[30%_80%]"
                             height="h-[22rem]"
                         />
                         <Paragraph alignment="text-left">
@@ -297,23 +297,23 @@ export default function Page() {
                 </Heading>
                 <CroppedImage
                     image="bg-[url('../public/login.png')]"
-                    imageSize="bg-[length:30rem]"
-                    imagePosition="bg-[-4.5rem_-2.5rem]"
+                    imageSize="bg-[length:125%]"
+                    imagePosition="bg-[50%_30%]"
                     height="h-48"
                 />
                 <Paragraph alignment="text-left">
-                    I chose NextAuth for it’s easy integration into Next.js
+                    I chose NextAuth for it&apos;s easy integration into Next.js
                     projects and Github as the OAuth provider. When a new user
                     signs in, a new UUID is created in User table of the
-                    database and is associated with the user’s email. On
+                    database and is associated with the user&apos;s email. On
                     subsequent logins, the email is found in the database and
                     the user is redirected to their boards. The UUID for the
                     user can seen in the URL.
                 </Paragraph>
                 <CroppedImage
                     image="bg-[url('../public/UUID.png')]"
-                    imageSize="bg-[length:40rem]"
-                    imagePosition="bg-[-13rem_-0rem]"
+                    imageSize="bg-[length:200%]"
+                    imagePosition="bg-[65%_100%]"
                     height="h-24"
                 />
             </div>
@@ -328,8 +328,8 @@ export default function Page() {
                 </Heading>
                 <CroppedImage
                     image="bg-[url('../public/dragndrop.gif')]"
-                    imageSize="bg-[length:55rem]"
-                    imagePosition="bg-[-10rem_-6rem]"
+                    imageSize="bg-[length:250%]"
+                    imagePosition="bg-[25%_25%]"
                     height="h-48"
                 />
                 <Paragraph alignment="text-left">
