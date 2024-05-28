@@ -5,7 +5,7 @@ type Props = {
     imageOpacity?: string
     height: string
     colorOverlay?: string
-    isVignette?: boolean
+    isAnimatedOverlay?: boolean
 }
 
 export default function CroppedImage({
@@ -15,7 +15,7 @@ export default function CroppedImage({
     imageOpacity,
     height,
     colorOverlay,
-    isVignette,
+    isAnimatedOverlay,
 }: Props) {
     return (
         <div className="relative rounded-[5px] overflow-hidden">
@@ -30,8 +30,8 @@ export default function CroppedImage({
                     imageOpacity ?? ""
                 }`}
             ></div>
-            {isVignette && (
-                <div className="absolute inset-0 bg-[url('../public/vignette.svg')] bg-cover opacity-25"></div>
+            {isAnimatedOverlay && (
+                <div className="absolute inset-0 thumbOverlay mix-blend-multiply opacity-50"></div>
             )}
             {colorOverlay && (
                 <div className={`absolute inset-0 -z-10 ${colorOverlay}`}></div>

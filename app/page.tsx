@@ -136,7 +136,7 @@ export default function Home() {
                             imageSize="bg-[length:80rem]"
                             imagePosition="bg-[-8rem_-3rem]"
                             height="h-[12rem]"
-                            isVignette={true}
+                            isAnimatedOverlay={true}
                         />
                     }
                     linesOfCode={4700}
@@ -185,7 +185,7 @@ export default function Home() {
                             imageSize="bg-[length:38rem]"
                             imagePosition="bg-[-9rem_-11rem]"
                             height="h-[12rem]"
-                            isVignette={true}
+                            isAnimatedOverlay={true}
                         />
                     }
                     linesOfCode={4000}
