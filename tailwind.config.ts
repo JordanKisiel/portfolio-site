@@ -42,7 +42,9 @@ const config: Config = {
             orelega: "var(--font-orelega)",
         },
         screens: {
-            sm: "390px",
+            sm: "425px",
+            md: "550px",
+            lg: "625px",
         },
     },
     plugins: [require("@designbycode/tailwindcss-text-stroke")],

@@ -32,7 +32,7 @@ export default function Flair({
     badgeOptions,
 }: Props) {
     return (
-        <div className="w-4/5 relative flex flex-row justify-between">
+        <div className="w-4/5 min-w-[16.5rem] max-w-[18rem] relative flex flex-row justify-between">
             {/* left spacer */}
             <div
                 className={`w-full ${badgeOptions.leftSpacing} ${badgeOptions.rightSpacing}`}
