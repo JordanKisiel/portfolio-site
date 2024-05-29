@@ -3,7 +3,7 @@ type Props = {
     imageSize: string
     imagePosition: string
     imageOpacity?: string
-    height: string
+    aspect: string
     colorOverlay?: string
     isAnimatedOverlay?: boolean
 }
@@ -13,7 +13,7 @@ export default function CroppedImage({
     imageSize,
     imagePosition,
     imageOpacity,
-    height,
+    aspect,
     colorOverlay,
     isAnimatedOverlay,
 }: Props) {
@@ -26,7 +26,7 @@ export default function CroppedImage({
             )}
             <div
                 className={`w-full bg-no-repeat 
-                            ${image} ${imageSize} ${imagePosition} ${height} ${
+                            ${image} ${imageSize} ${imagePosition} ${aspect} ${
                     imageOpacity ?? ""
                 }`}
             ></div>
