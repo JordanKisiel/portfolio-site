@@ -58,7 +58,7 @@ export default function Nav() {
                 className={`fixed inset-0 flex flex-col items-center justify-center bg-red-400
                                 font-amiko text-2xl uppercase text-neutral-900 overflow-hidden h-0 z-10`}
             >
-                <ul className="flex flex-col gap-3">
+                <ul className="flex flex-col gap-10">
                     <li>
                         <a
                             onClick={() => toggleOpen(isOpen)}
