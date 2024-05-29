@@ -17,8 +17,8 @@
             },
             "badgeOptions": {
                 "bgColor": "bg-purple-400",
-                "leftSpacing": "w-[1rem]",
-                "rightSpacing": "w-[0rem]",
+                "leftSpacing": "ml-[1rem]",
+                "rightSpacing": "mr-[0rem]",
                 "badgeRotation": "rotate-3",
                 "isIconFirst": true
             }
@@ -40,8 +40,8 @@
             },
             "badgeOptions": {
                 "bgColor": "bg-red-400",
-                "leftSpacing": "w-[0rem]",
-                "rightSpacing": "w-[1rem]",
+                "leftSpacing": "ml-[0rem]",
+                "rightSpacing": "mr-[1rem]",
                 "badgeRotation": "-rotate-1",
                 "isIconFirst": false
             }
@@ -63,8 +63,8 @@
             },
             "badgeOptions": {
                 "bgColor": "bg-pink-400",
-                "leftSpacing": "w-[0.5rem]",
-                "rightSpacing": "w-[0.5rem]",
+                "leftSpacing": "ml-[0.5rem]",
+                "rightSpacing": "mr-[0.5rem]",
                 "badgeRotation": "rotate-2",
                 "isIconFirst": false
             }
@@ -86,8 +86,8 @@
             },
             "badgeOptions": {
                 "bgColor": "bg-orange-400",
-                "leftSpacing": "w-[0rem]",
-                "rightSpacing": "w-[0rem]",
+                "leftSpacing": "ml-[0rem]",
+                "rightSpacing": "mr-[0rem]",
                 "badgeRotation": "-rotate-3",
                 "isIconFirst": true
             }
@@ -109,8 +109,8 @@
             },
             "badgeOptions": {
                 "bgColor": "bg-blue-400",
-                "leftSpacing": "w-[0rem]",
-                "rightSpacing": "w-[2rem]",
+                "leftSpacing": "ml-[0rem]",
+                "rightSpacing": "mr-[2rem]",
                 "badgeRotation": "rotate-2",
                 "isIconFirst": false
             }
