@@ -159,7 +159,7 @@ export default function Page() {
                 <CroppedImage
                     image="bg-[url('../public/connect-four-game.png')]"
                     imageSize="bg-[length:101%]"
-                    imagePosition="bg-[0%_0%]"
+                    imagePosition="bg-[0%_50%]"
                     imageOpacity="opacity-60"
                     height="h-[36rem]"
                     colorOverlay="bg-red-400"
@@ -271,7 +271,7 @@ export default function Page() {
                 <CroppedImage
                     image="bg-[url('../public/connect-four-menu-anim.gif')]"
                     imageSize="bg-[length:100%]"
-                    imagePosition="bg-[0%_0%]"
+                    imagePosition="bg-[0%_25%]"
                     height="h-[30rem]"
                 />
                 <Paragraph alignment="text-left">

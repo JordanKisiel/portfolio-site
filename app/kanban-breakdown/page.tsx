@@ -267,7 +267,7 @@ export default function Page() {
                         <CroppedImage
                             image="bg-[url('../public/edit-column-logic.png')]"
                             imageSize="bg-[length:150%]"
-                            imagePosition="bg-[30%_80%]"
+                            imagePosition="bg-[30%_55%]"
                             height="h-[22rem]"
                         />
                         <Paragraph alignment="text-left">
