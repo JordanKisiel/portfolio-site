@@ -51,7 +51,7 @@ export default function Home() {
     ]
 
     return (
-        <main className="relative overflow-x-hidden">
+        <main className="relative overflow-x-hiddenp px-5">
             <Nav />
             {/* Intro */}
             <div className="flex flex-col items-center pt-20 gap-5 mb-10">
@@ -72,11 +72,11 @@ export default function Home() {
 
             {/* Contact */}
             <div className="mb-20">
-                <div className="bg-blue-400 mx-5 rounded-[5px] -rotate-[3deg]">
+                <div className="bg-blue-400 rounded-[5px] -rotate-[3deg]">
                     <div className="bg-red-400 rounded-[5px] rotate-[7deg]">
                         <ul
-                            className="flex flex-col font-abhaya font-semibold text-lg bg-blue-100 p-5 
-                                      rounded-[5px] gap-5 -rotate-[4deg]"
+                            className="flex flex-col font-abhaya text-2xl leading-5 bg-blue-100 p-5 
+                                      rounded-[5px] gap-8 -rotate-[4deg]"
                             id="contact"
                         >
                             <ContactListLink
@@ -106,7 +106,7 @@ export default function Home() {
 
             {/* About Me */}
             <div
-                className="flex flex-col items-center mx-5 gap-5 mb-40"
+                className="flex flex-col items-center gap-5 mb-40"
                 id="about"
             >
                 <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5">
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
 
             {/* Porfolio */}
-            <div className="mx-5">
+            <div>
                 <div
                     className="flex flex-col items-center bg-[url('../public/portfolio-bg.svg')] bg-no-repeat 
                                 pt-3 pb-20 bg-top mb-10"
