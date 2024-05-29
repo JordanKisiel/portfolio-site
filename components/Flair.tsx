@@ -34,40 +34,43 @@ export default function Flair({
     return (
         <div className="w-4/5 relative flex flex-row justify-between">
             {/* left spacer */}
-            <div className={`${badgeOptions.leftSpacing} h-[1rem]`}></div>
             <div
-                className={`w-full flex flex-row items-center p-[0.625rem] rounded-[5px] 
+                className={`w-full ${badgeOptions.leftSpacing} ${badgeOptions.rightSpacing}`}
+            >
+                <div
+                    className={`w-full flex flex-row items-center p-[0.625rem] rounded-[5px] 
                                    border-neutral-900 border-2 drop-shadow-[2px_2px_0px_rgba(22,22,22,1)] min-h-[4.5rem] px-5
                                    ${badgeOptions.bgColor} ${
-                    badgeOptions.badgeRotation
-                } 
+                        badgeOptions.badgeRotation
+                    } 
                                    ${
                                        badgeOptions.isIconFirst
                                            ? "justify-end"
                                            : "justify-start"
                                    }`}
-            >
-                <div
-                    className={`${textOptions.textWidth} ${
-                        badgeOptions.isIconFirst ? "text-right" : "text-left"
-                    }`}
                 >
-                    <p
-                        className={`font-amiko uppercase text-xl ${textOptions.textColor}`}
+                    <div
+                        className={`${textOptions.textWidth} ${
+                            badgeOptions.isIconFirst
+                                ? "text-right"
+                                : "text-left"
+                        }`}
                     >
-                        {textOptions.text}
-                    </p>
-                    {textOptions.subtext && (
                         <p
-                            className={`font-amiko uppercase text-[0.625rem] ${textOptions.textColor}`}
+                            className={`font-amiko uppercase text-xl ${textOptions.textColor}`}
                         >
-                            {textOptions.subtext}
+                            {textOptions.text}
                         </p>
-                    )}
+                        {textOptions.subtext && (
+                            <p
+                                className={`font-amiko uppercase text-[0.625rem] ${textOptions.textColor}`}
+                            >
+                                {textOptions.subtext}
+                            </p>
+                        )}
+                    </div>
                 </div>
             </div>
-            {/* right spacer */}
-            <div className={`${badgeOptions.rightSpacing} h-[1rem]`}></div>
             {typeof iconOptions.icon === "number" ? (
                 <p
                     className={`absolute font-orelega text-[7rem] text-neutral-900 text-stroke-2 text-stroke-red-100 [text-shadow:_5px_5px_0_rgb(21_21_21_/_100%)] ${iconOptions.iconRotation} ${iconOptions.iconPosX} ${iconOptions.iconPosY}`}
