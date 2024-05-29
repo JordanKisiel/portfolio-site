@@ -41,6 +41,9 @@ const config: Config = {
             amiko: "var(--font-amiko)",
             orelega: "var(--font-orelega)",
         },
+        screens: {
+            sm: "390px",
+        },
     },
     plugins: [require("@designbycode/tailwindcss-text-stroke")],
 }

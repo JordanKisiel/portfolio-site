@@ -255,7 +255,7 @@ export default function Page() {
                             image="bg-[url('../public/dynamic-input-data-shape.png')]"
                             imageSize="bg-[length:100%]"
                             imagePosition="bg-[0%_0%]"
-                            height="h-[10rem]"
+                            height="h-[11.5rem]"
                         />
                         <Paragraph alignment="text-left">
                             To accomplish this, I used the data shape above. An
@@ -268,7 +268,7 @@ export default function Page() {
                             image="bg-[url('../public/edit-column-logic.png')]"
                             imageSize="bg-[length:150%]"
                             imagePosition="bg-[30%_55%]"
-                            height="h-[22rem]"
+                            height="h-[23rem]"
                         />
                         <Paragraph alignment="text-left">
                             For instance, if the user edits a column, the

@@ -272,7 +272,7 @@ export default function Page() {
                     image="bg-[url('../public/connect-four-menu-anim.gif')]"
                     imageSize="bg-[length:100%]"
                     imagePosition="bg-[0%_25%]"
-                    height="h-[30rem]"
+                    height="h-[30.5rem]"
                 />
                 <Paragraph alignment="text-left">
                     Most parts of the app are animated to reinforce the idea of

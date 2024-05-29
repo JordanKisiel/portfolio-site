@@ -1,7 +1,12 @@
 TODO:
-  -  add animation to nav menu
-    -  fix issues with animation:
-      - doesn't animate on first open
-      - doesn't animate on close
+  
+  -  check and fix responsive design
+     x -  iPhone 12 Pro
+     x -  iPhone 14 Pro Max
+     -  iPad Mini
+     -  iPad Pro
+     -  laptop
+     -  desktop
+  -  check design on actual phone
   -  add google doc link to resume on homepage
   
