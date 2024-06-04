@@ -57,7 +57,7 @@ export default function Home() {
                 <Nav />
                 {/* Intro */}
                 <div className="flex flex-col items-center pt-20 gap-5 mb-10">
-                    <IntroText width={220} />
+                    <IntroText />
                     <Photo />
                     <p className="flex flex-col items-center font-abhaya text-neutral-900 text-center">
                         <span className="block text-2xl font-bold leading-9">
