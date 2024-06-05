@@ -31,6 +31,7 @@ const config: Config = {
             },
             neutral: {
                 100: "#ECE5E1",
+                200: "#E2ECEF",
                 300: "E0E0E0",
                 900: "#161616",
             },

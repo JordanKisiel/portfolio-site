@@ -3,13 +3,12 @@
 import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
+import NavLinkList from "@/components/NavLinkList"
 
 gsap.registerPlugin(useGSAP)
 
 export default function MobileNav() {
     const [isOpen, setIsOpen] = useState(false)
-
-    console.log("mobile nav rendered")
 
     const navContainer = useRef<HTMLElement>(null)
 
@@ -20,7 +19,7 @@ export default function MobileNav() {
             //close animation
             gsap.to(navContainer.current, {
                 height: 0,
-                duration: 0.4,
+                duration: 0.3,
             })
         } else {
             //open animation
@@ -61,33 +60,7 @@ export default function MobileNav() {
                                 font-amiko text-2xl uppercase text-neutral-900 overflow-hidden h-0 z-10`}
             >
                 <ul className="flex flex-col gap-10">
-                    <li>
-                        <a
-                            onClick={() => toggleOpen(isOpen)}
-                            href="#contact"
-                        >
-                            Contact
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            onClick={() => toggleOpen(isOpen)}
-                            href="#about"
-                        >
-                            About Me
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            onClick={() => toggleOpen(isOpen)}
-                            href="#portfolio"
-                        >
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Resume</a>
-                    </li>
+                    <NavLinkList onClick={() => toggleOpen(isOpen)} />
                 </ul>
             </nav>
         </div>

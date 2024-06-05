@@ -13,7 +13,10 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
+        <html
+            className="scroll-smooth"
+            lang="en"
+        >
             <body
                 className={`${outfit.variable} ${abhaya.variable} ${amiko.variable} ${orelega.variable} bg-orange-100`}
             >
