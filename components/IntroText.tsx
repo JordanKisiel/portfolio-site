@@ -5,7 +5,7 @@ import IntroClipPath from "@/components/IntroClipPath"
 export default function IntroText() {
     return (
         <div className="relative flex flex-row justify-center items-center">
-            <picture>
+            <picture className="opacity-75">
                 <source
                     srcSet="desktop-intro.svg"
                     media="(min-width: 768px)"
