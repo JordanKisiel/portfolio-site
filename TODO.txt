@@ -3,7 +3,7 @@ TODO:
   -  check and fix responsive design
      x -  iPhone 12 Pro
      x -  iPhone 14 Pro Max
-     -  iPad Mini
+     x -  iPad Mini
      -  iPad Pro
      -  laptop
      -  desktop

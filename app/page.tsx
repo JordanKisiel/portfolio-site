@@ -75,12 +75,13 @@ export default function Home() {
                 </div>
 
                 {/* Contact */}
-                <div className="mb-20 tb:w-3/5">
-                    <div className="bg-blue-400 rounded-[5px] -rotate-[3deg]">
-                        <div className="bg-red-400 rounded-[5px] rotate-[7deg]">
+                <div className="mb-20 tb:w-3/5 tb:max-w-[30rem] tl:w-4/5 tl:max-w-full">
+                    <div className="bg-blue-400 rounded-[5px] -rotate-[3deg] tl:px-3 tl:-rotate-[2deg]">
+                        <div className="bg-red-400 rounded-[5px] rotate-[7deg] tl:px-2 tl:rotate-[4deg]">
                             <ul
                                 className="flex flex-col font-abhaya text-xl sm:text-2xl leading-5 bg-blue-100 p-5 
-                                      rounded-[5px] gap-8 -rotate-[4deg]"
+                                      rounded-[5px] gap-8 -rotate-[4deg] tl:flex-row tl:text-xl tl:justify-between tl:px-8
+                                      tl:-rotate-[2deg]"
                                 id="contact"
                             >
                                 <ContactListLink
@@ -101,7 +102,7 @@ export default function Home() {
                                 <ContactListLink
                                     bgIcon="bg-[url('../public/resume-icon.svg')]"
                                     linkUrl="#"
-                                    text="Resume (on Google Docs)"
+                                    text="Resume"
                                 />
                             </ul>
                         </div>
@@ -111,7 +112,7 @@ export default function Home() {
                 {/* About Me */}
                 <div
                     className="flex flex-col items-center gap-5 mb-40 tb:absolute tb:top-[7rem] 
-                               tb:w-[95%] tb:grid tb:grid-cols-2 tb:min-h-[24rem]"
+                               tb:w-[95%] tb:max-w-[48rem] tb:grid tb:grid-cols-2 tb:min-h-[24rem]"
                     id="about"
                 >
                     <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5 tb:hidden">

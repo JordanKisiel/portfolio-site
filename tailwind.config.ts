@@ -47,6 +47,7 @@ const config: Config = {
             md: "550px",
             lg: "625px",
             tb: "768px",
+            tl: "950px",
         },
     },
     plugins: [require("@designbycode/tailwindcss-text-stroke")],

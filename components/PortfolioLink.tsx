@@ -31,7 +31,7 @@ export default function PortfolioLink({
                                    ${bgColor} ${icon}`}
             href={url}
         >
-            <div className="flex flex-row justify-between items-center pl-[4.5rem] py-3 pr-3">
+            <div className="flex flex-row justify-between items-center pl-[4.5rem] py-3 pr-3 tl:py-2.5">
                 <span
                     className={`block font-abhaya w-2/3 leading-6 ${textSize}`}
                 >
