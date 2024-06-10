@@ -10,7 +10,11 @@ export default function DesktopNav() {
                            drop-shadow-[4px_4px_0px_rgba(22,22,22,1)] border-neutral-900 
                            border-2 max-w-[30rem] gap-8 uppercase font-amiko"
             >
-                <NavLinkList />
+                <NavLinkList
+                    onClick={() => {
+                        console.log("clicked")
+                    }}
+                />
             </ul>
         </nav>
     )

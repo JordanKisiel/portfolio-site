@@ -58,7 +58,7 @@ export default function Home() {
             <>
                 <Nav />
                 {/* Intro */}
-                <div className="flex flex-col items-center pt-20 gap-5 mb-10 tb:pt-[11rem] tb:relative">
+                <div className="flex flex-col items-center pt-20 gap-5 mb-10 tb:mt-[6.25rem] tb:relative">
                     <IntroText />
                     <Photo />
                     <p className="flex flex-col items-center font-abhaya text-neutral-900 text-center">
@@ -75,7 +75,7 @@ export default function Home() {
                 </div>
 
                 {/* Contact */}
-                <div className="mb-20">
+                <div className="mb-20 tb:w-3/5">
                     <div className="bg-blue-400 rounded-[5px] -rotate-[3deg]">
                         <div className="bg-red-400 rounded-[5px] rotate-[7deg]">
                             <ul
@@ -121,10 +121,10 @@ export default function Home() {
                 </div>
 
                 {/* Porfolio */}
-                <div>
+                <div className="tb:flex tb:flex-col items-center">
                     <div
                         className="flex flex-col items-center bg-[url('../public/portfolio-bg.svg')] bg-no-repeat 
-                                pt-3 pb-20 bg-top mb-10"
+                                pt-3 pb-20 bg-top mb-10 tb:mt-10 tb:mb-6 tb:w-full"
                         id="portfolio"
                     >
                         <h2 className="font-outfit text-neutral-900 text-4xl text-center mb-5">
@@ -138,8 +138,8 @@ export default function Home() {
                         thumbnail={
                             <CroppedImage
                                 image="bg-[url('../public/kanban-mobile-thumb.png')]"
-                                imageSize="bg-[length:400%]"
-                                imagePosition="bg-[13%_8%]"
+                                imageSize="bg-[length:400%] tb:bg-[length:200%]"
+                                imagePosition="bg-[13%_8%] tb:bg-[0%_0%]"
                                 aspect="aspect-[16/9]"
                                 isAnimatedOverlay={true}
                             />
@@ -187,8 +187,8 @@ export default function Home() {
                         thumbnail={
                             <CroppedImage
                                 image="bg-[url('../public/connect-four-mobile-thumb.png')]"
-                                imageSize="bg-[length:200%]"
-                                imagePosition="bg-[45%_30%]"
+                                imageSize="bg-[length:200%] tb:bg-[length:150%]"
+                                imagePosition="bg-[45%_30%] tb:bg-[45%_40%]"
                                 aspect="aspect-[16/9]"
                                 isAnimatedOverlay={true}
                             />

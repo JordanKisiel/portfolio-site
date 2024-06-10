@@ -1,5 +1,5 @@
 TODO:
-  - get flair to surround intro
+  - figure out why desktopnav links aren't receiving clicks
   -  check and fix responsive design
      x -  iPhone 12 Pro
      x -  iPhone 14 Pro Max

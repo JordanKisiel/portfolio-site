@@ -16,14 +16,6 @@ export default function NavLinkList({ onClick }: Props) {
             <li>
                 <a
                     onClick={onClick ? () => onClick() : () => {}}
-                    href="#about"
-                >
-                    About Me
-                </a>
-            </li>
-            <li>
-                <a
-                    onClick={onClick ? () => onClick() : () => {}}
                     href="#portfolio"
                 >
                     Portfolio
