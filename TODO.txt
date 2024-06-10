@@ -1,5 +1,5 @@
 TODO:
-  - make desktop nav absolutely positioned so page doesn't jump when it loads in
+  - get flair to surround intro
   -  check and fix responsive design
      x -  iPhone 12 Pro
      x -  iPhone 14 Pro Max

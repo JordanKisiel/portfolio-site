@@ -37,16 +37,18 @@ export default function Home() {
             iconOptions={{
                 icon: piecesOfFlair.length + 1,
                 iconAlt: "n/a",
-                iconPosX: "-left-2",
+                iconPosX: "-left-2 tb:left-0",
                 iconPosY: "-top-[3.5rem]",
                 iconRotation: "-rotate-6",
             }}
             badgeOptions={{
                 bgColor: "bg-red-400",
-                badgeRotation: "-rotate-2",
+                badgeRotation: "-rotate-2 tb:rotate-[12deg]",
                 isIconFirst: true,
-                leftSpacing: "w-[1rem]",
-                rightSpacing: "w-[0.5rem]",
+                leftSpacing: "ml-[1rem] tb:ml-[1.5rem]",
+                rightSpacing: "mr-[0.5rem] tb:mr-[0rem]",
+                order: "order-last",
+                alignment: "tb:justify-self-end",
             }}
         />,
     ]
@@ -56,7 +58,7 @@ export default function Home() {
             <>
                 <Nav />
                 {/* Intro */}
-                <div className="flex flex-col items-center pt-20 gap-5 mb-10 tb:pt-32">
+                <div className="flex flex-col items-center pt-20 gap-5 mb-10 tb:pt-[11rem] tb:relative">
                     <IntroText />
                     <Photo />
                     <p className="flex flex-col items-center font-abhaya text-neutral-900 text-center">
@@ -108,10 +110,11 @@ export default function Home() {
 
                 {/* About Me */}
                 <div
-                    className="flex flex-col items-center gap-5 mb-40"
+                    className="flex flex-col items-center gap-5 mb-40 tb:absolute tb:top-[7rem] 
+                               tb:w-[95%] tb:grid tb:grid-cols-2 tb:min-h-[24rem]"
                     id="about"
                 >
-                    <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5">
+                    <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5 tb:hidden">
                         About Me
                     </h2>
                     {piecesOfFlair}

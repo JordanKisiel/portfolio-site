@@ -10,17 +10,19 @@
                 "icon": "nova.svg",
                 "iconAlt": "Northern Virginia icon",
                 "iconRotation": "-rotate-3",
-                "iconPosX": "-left-6",
+                "iconPosX": "-left-6 tb:-left-4",
                 "iconPosY": "-top-5",
-                "iconWidth": 161,
-                "iconHeight": 83
+                "iconWidth": "w-[161px] tb:w-[135px]",
+                "iconHeight": "h-[83px]"
             },
             "badgeOptions": {
                 "bgColor": "bg-purple-400",
                 "leftSpacing": "ml-[1rem]",
                 "rightSpacing": "mr-[0rem]",
-                "badgeRotation": "rotate-3",
-                "isIconFirst": true
+                "badgeRotation": "rotate-3 tb:rotate-[10deg]",
+                "isIconFirst": true,
+                "order": "order-1 tb:order-1",
+                "alignment": "tb:justify-self-start"
             }
         },
         {
@@ -34,16 +36,18 @@
                 "iconAlt": "Code tags icon",
                 "iconRotation": "rotate-0",
                 "iconPosX": "-right-1",
-                "iconPosY": "-top-5",
-                "iconWidth": 113,
-                "iconHeight": 99
+                "iconPosY": "-top-5 tb:-top-3",
+                "iconWidth": "w-[113px] tb:w-[90px]",
+                "iconHeight": "h-[99px]"
             },
             "badgeOptions": {
                 "bgColor": "bg-red-400",
                 "leftSpacing": "ml-[0rem]",
                 "rightSpacing": "mr-[1rem]",
-                "badgeRotation": "-rotate-1",
-                "isIconFirst": false
+                "badgeRotation": "-rotate-1 tb:rotate-3",
+                "isIconFirst": false,
+                "order": "order-2 tb:order-3",
+                "alignment": "tb:justify-self-start"
             }
         },
         {
@@ -56,17 +60,19 @@
                 "icon": "homer.svg",
                 "iconAlt": "Homer Simpson head icon",
                 "iconRotation": "-rotate-3",
-                "iconPosX": "-right-0",
-                "iconPosY": "-top-[3.6rem]",
-                "iconWidth": 125,
-                "iconHeight": 166
+                "iconPosX": "-right-0 tb:-right-5",
+                "iconPosY": "-top-[3.6rem] tb:-top-16",
+                "iconWidth": "w-[125px] tb:w-[100px]",
+                "iconHeight": "h-[166px]"
             },
             "badgeOptions": {
                 "bgColor": "bg-pink-400",
                 "leftSpacing": "ml-[0.5rem]",
                 "rightSpacing": "mr-[0.5rem]",
-                "badgeRotation": "rotate-2",
-                "isIconFirst": false
+                "badgeRotation": "rotate-2 tb:-rotate-[14deg]",
+                "isIconFirst": false,
+                "order": "order-3 tb:order-2",
+                "alignment": "tb:justify-self-end"
             }
         },
         {
@@ -79,17 +85,19 @@
                 "icon": "foobar.svg",
                 "iconAlt": "Google Foobar Challenge icon",
                 "iconRotation": "-rotate-3",
-                "iconPosX": "-left-12",
-                "iconPosY": "-top-3",
-                "iconWidth": 131,
-                "iconHeight": 128
+                "iconPosX": "-left-12 tb:-left-5",
+                "iconPosY": "-top-3 tb:-top-5",
+                "iconWidth": "w-[131px] tb:w-[100px]",
+                "iconHeight": "h-[128px]"
             },
             "badgeOptions": {
                 "bgColor": "bg-orange-400",
-                "leftSpacing": "ml-[0rem]",
+                "leftSpacing": "ml-[0rem] tb:ml-[1.25rem]",
                 "rightSpacing": "mr-[0rem]",
-                "badgeRotation": "-rotate-3",
-                "isIconFirst": true
+                "badgeRotation": "-rotate-3 tb:-rotate-[10deg]",
+                "isIconFirst": true,
+                "order": "order-4 tb:order-5",
+                "alignment": "tb:justify-self-start"
             }
         },
         {
@@ -101,18 +109,20 @@
             "iconOptions": {
                 "icon": "water.svg",
                 "iconAlt": "Water icon",
-                "iconRotation": "-rotate-0",
-                "iconPosX": "-right-2",
-                "iconPosY": "-top-0",
-                "iconWidth": 111,
-                "iconHeight": 87
+                "iconRotation": "-rotate-0 tb:rotate-[17deg]",
+                "iconPosX": "-right-2 tb:-right-4",
+                "iconPosY": "-top-0 tb:-top-5",
+                "iconWidth": "w-[111px] tb:w-[80px]",
+                "iconHeight": "h-[87px]"
             },
             "badgeOptions": {
                 "bgColor": "bg-blue-400",
-                "leftSpacing": "ml-[0rem]",
-                "rightSpacing": "mr-[2rem]",
-                "badgeRotation": "rotate-2",
-                "isIconFirst": false
+                "leftSpacing": "ml-[0rem] tb:ml-[1.5rem]",
+                "rightSpacing": "mr-[2rem] tb:mr-[0rem]",
+                "badgeRotation": "rotate-2 tb:-rotate-6",
+                "isIconFirst": false,
+                "order": "order-5 tb:order-4",
+                "alignment": "tb:justify-self-end"
             }
         }
     ]
