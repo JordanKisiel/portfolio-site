@@ -10,9 +10,9 @@
                 "icon": "nova.svg",
                 "iconAlt": "Northern Virginia icon",
                 "iconRotation": "-rotate-3",
-                "iconPosX": "-left-6 tb:-left-4",
-                "iconPosY": "-top-5",
-                "iconWidth": "w-[161px] tb:w-[135px]",
+                "iconPosX": "-left-6 tb:-left-4 dt:-left-10",
+                "iconPosY": "-top-5 dt:-top-6",
+                "iconWidth": "w-[161px] tb:w-[135px] dt:w-[161px]",
                 "iconHeight": "h-[83px]"
             },
             "badgeOptions": {
@@ -35,9 +35,9 @@
                 "icon": "tags.svg",
                 "iconAlt": "Code tags icon",
                 "iconRotation": "rotate-0",
-                "iconPosX": "-right-1",
+                "iconPosX": "-right-1 dt:right-0",
                 "iconPosY": "-top-5 tb:-top-3",
-                "iconWidth": "w-[113px] tb:w-[90px]",
+                "iconWidth": "w-[113px] tb:w-[90px] dt:w-[113px]",
                 "iconHeight": "h-[99px]"
             },
             "badgeOptions": {
@@ -62,7 +62,7 @@
                 "iconRotation": "-rotate-3",
                 "iconPosX": "-right-0 tb:-right-5",
                 "iconPosY": "-top-[3.6rem] tb:-top-16",
-                "iconWidth": "w-[125px] tb:w-[100px]",
+                "iconWidth": "w-[125px] tb:w-[100px] dt:w-[115px]",
                 "iconHeight": "h-[166px]"
             },
             "badgeOptions": {
@@ -85,9 +85,9 @@
                 "icon": "foobar.svg",
                 "iconAlt": "Google Foobar Challenge icon",
                 "iconRotation": "-rotate-3",
-                "iconPosX": "-left-12 tb:-left-5",
-                "iconPosY": "-top-3 tb:-top-5",
-                "iconWidth": "w-[131px] tb:w-[100px]",
+                "iconPosX": "-left-12 tb:-left-5 dt:-left-10",
+                "iconPosY": "-top-3 tb:-top-5 dt:-top-3",
+                "iconWidth": "w-[131px] tb:w-[100px] dt:w-[120px]",
                 "iconHeight": "h-[128px]"
             },
             "badgeOptions": {
@@ -111,8 +111,8 @@
                 "iconAlt": "Water icon",
                 "iconRotation": "-rotate-0 tb:rotate-[17deg]",
                 "iconPosX": "-right-2 tb:-right-4",
-                "iconPosY": "-top-0 tb:-top-5",
-                "iconWidth": "w-[111px] tb:w-[80px]",
+                "iconPosY": "-top-0 tb:-top-5 dt:-top-3",
+                "iconWidth": "w-[111px] tb:w-[80px] dt:w-[105px]",
                 "iconHeight": "h-[87px]"
             },
             "badgeOptions": {

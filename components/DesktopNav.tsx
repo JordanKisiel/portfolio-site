@@ -3,7 +3,7 @@ import NavLinkList from "@/components/NavLinkList"
 export default function DesktopNav() {
     return (
         <nav
-            className={`w-full flex flex-row justify-center absolute left-[50%] -translate-x-[50%]`}
+            className={`w-full flex flex-row justify-center absolute left-[50%] -translate-x-[50%] dt:top-7`}
         >
             <ul
                 className="flex flex-row justify-between px-4 pt-1 bg-neutral-200 rounded-full 

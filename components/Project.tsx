@@ -14,12 +14,12 @@ export default function Project({
     portfolioLinks,
 }: Props) {
     return (
-        <div className="flex flex-col mb-20 tb:w-5/6 tl:grid tl:grid-cols-3 tl:gap-3">
+        <div className="flex flex-col mb-20 tb:w-5/6 tl:grid tl:grid-cols-3 tl:gap-3 dt:max-w-full dt:mb-28">
             <div className="mb-[0.625rem] tl:col-span-2">
                 <h3
                     className="font-amiko text-neutral-900 text-2xl leading-6 text-center uppercase text-balance bg-neutral-100 
                                    rounded-[5px] shadow-[inset_2px_2px_2px_0_rgba(0,0,0,0.25)] border-2 border-[#EFEFEF]
-                                   pt-3 pb-2 px-4 mb-[0.625rem] tb:text-3xl"
+                                   pt-3 pb-2 px-4 mb-[0.625rem] tb:text-3xl dt:text-5xl"
                 >
                     {title}
                 </h3>

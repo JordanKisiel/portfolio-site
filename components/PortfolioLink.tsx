@@ -27,11 +27,11 @@ export default function PortfolioLink({
     return (
         <Link
             className={`rounded-[5px] bg-no-repeat bg-[center_left_1rem] block 
-                                   border-2 border-neutral-900 drop-shadow-[4px_4px_0px_rgba(22,22,22,1)] ${bgSize} ${textColor}
-                                   ${bgColor} ${icon}`}
+                                   border-2 border-neutral-900 drop-shadow-[4px_4px_0px_rgba(22,22,22,1)]
+                                   ${bgSize} ${textColor} ${bgColor} ${icon}`}
             href={url}
         >
-            <div className="flex flex-row justify-between items-center pl-[4.5rem] py-3 pr-3 tl:py-2.5">
+            <div className="flex flex-row justify-between items-center pl-[4.5rem] py-3 pr-3 tl:py-2.5 dt:py-4">
                 <span
                     className={`block font-abhaya w-2/3 leading-6 ${textSize}`}
                 >

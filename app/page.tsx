@@ -37,8 +37,8 @@ export default function Home() {
             iconOptions={{
                 icon: piecesOfFlair.length + 1,
                 iconAlt: "n/a",
-                iconPosX: "-left-2 tb:left-0",
-                iconPosY: "-top-[3.5rem]",
+                iconPosX: "-left-2 tb:left-0 dt:-left-1",
+                iconPosY: "-top-[3.5rem] dt:-top-[5rem]",
                 iconRotation: "-rotate-6",
             }}
             badgeOptions={{
@@ -58,7 +58,7 @@ export default function Home() {
             <>
                 <Nav />
                 {/* Intro */}
-                <div className="flex flex-col items-center pt-20 gap-5 mb-10 tb:mt-[6.25rem] tb:relative">
+                <div className="flex flex-col items-center pt-20 gap-5 mb-10 tb:mt-[6.25rem] tb:relative dt:mb-20">
                     <IntroText />
                     <Photo />
                     <p className="flex flex-col items-center font-abhaya text-neutral-900 text-center">
@@ -75,7 +75,7 @@ export default function Home() {
                 </div>
 
                 {/* Contact */}
-                <div className="mb-20 tb:w-3/5 tb:max-w-[30rem] tl:w-4/5 tl:max-w-full">
+                <div className="mb-20 tb:w-3/5 tb:max-w-[30rem] tl:w-4/5 tl:max-w-[45rem] dt:max-w-[58rem] dt:mb-32">
                     <div className="bg-blue-400 rounded-[5px] -rotate-[3deg] tl:px-3 tl:-rotate-[2deg]">
                         <div className="bg-red-400 rounded-[5px] rotate-[7deg] tl:px-2 tl:rotate-[4deg]">
                             <ul
@@ -112,7 +112,8 @@ export default function Home() {
                 {/* About Me */}
                 <div
                     className="flex flex-col items-center gap-5 mb-40 tb:absolute tb:top-[7rem] 
-                               tb:w-[95%] tb:max-w-[48rem] tb:grid tb:grid-cols-2 tb:min-h-[24rem]"
+                               tb:w-[95%] tb:max-w-[48rem] tb:grid tb:grid-cols-2 tb:min-h-[24rem]
+                               dt:max-w-[70rem] dt:min-h-[30rem]"
                     id="about"
                 >
                     <h2 className="font-outfit text-neutral-900 text-5xl text-center mb-5 tb:hidden">
@@ -139,8 +140,8 @@ export default function Home() {
                         thumbnail={
                             <CroppedImage
                                 image="bg-[url('../public/kanban-mobile-thumb.png')]"
-                                imageSize="bg-[length:400%] tb:bg-[length:200%]"
-                                imagePosition="bg-[13%_8%] tb:bg-[0%_0%]"
+                                imageSize="bg-[length:400%] tb:bg-[length:200%] dt:bg-[length:160%]"
+                                imagePosition="bg-[13%_8%] tb:bg-[0%_0%] dt:bg-[5%_0%]"
                                 aspect="aspect-[16/9]"
                                 isAnimatedOverlay={true}
                             />
@@ -188,8 +189,8 @@ export default function Home() {
                         thumbnail={
                             <CroppedImage
                                 image="bg-[url('../public/connect-four-mobile-thumb.png')]"
-                                imageSize="bg-[length:200%] tb:bg-[length:150%]"
-                                imagePosition="bg-[45%_30%] tb:bg-[45%_40%]"
+                                imageSize="bg-[length:200%] tb:bg-[length:150%] dt:bg-[length:100%]"
+                                imagePosition="bg-[45%_30%] tb:bg-[45%_40%] dt:bg-[45%_0%]"
                                 aspect="aspect-[16/9]"
                                 isAnimatedOverlay={true}
                             />
