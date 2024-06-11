@@ -16,7 +16,7 @@ export default function LabeledContainer({
             className={`flex flex-col items-center rounded-[5px] px-5 py-5 mb-10 ${bgColor}`}
         >
             <h2
-                className={`text-amiko uppercase text-center mb-5 ${textColor}`}
+                className={`text-amiko uppercase text-center mb-5 tracking-wider ${textColor}`}
             >
                 {label}
             </h2>
