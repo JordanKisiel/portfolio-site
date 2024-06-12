@@ -48,6 +48,7 @@ const config: Config = {
             lg: "625px",
             tb: "768px",
             tl: "950px",
+            txl: "1150px",
             dt: "1350px",
         },
     },

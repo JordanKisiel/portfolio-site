@@ -22,7 +22,9 @@ export default function TechUsed({ logo, logoAlt, logoSize, label }: Props) {
                     width={logoSize}
                 />
             </div>
-            <p className="font-abhaya text-center leading-3">{label}</p>
+            <p className="font-abhaya font-semibold text-center leading-3">
+                {label}
+            </p>
         </div>
     )
 }

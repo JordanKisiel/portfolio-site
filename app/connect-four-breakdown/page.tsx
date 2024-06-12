@@ -21,21 +21,20 @@ import serverClientDiagram from "@/public/server-client-diagram.svg"
 import CodeHightlight from "@/components/CodeHighlight"
 import gameStateDiagram from "@/public/game-state-diagram.svg"
 import formulaDiagram from "@/public/connect-four-formula-diagram.svg"
+import BreakdownTitle from "@/components/BreakdownTitle"
 
 export default function Page() {
     return (
         <MainContainer>
             <>
-                <BackHomeLink />
-                <div className="flex flex-col gap-5 mb-10">
-                    <h1 className="font-outfit text-center mt-10">
-                        <span className="block text-[4rem] leading-[3.5rem]">
-                            Connect Four
-                        </span>
-                        <span className="text-xl">
-                            Player vs AI & <br /> Online 2 Player
-                        </span>
-                    </h1>
+                <div className="w-full">
+                    <BackHomeLink />
+                </div>
+                <div className="flex flex-col gap-5 mb-10 w-full">
+                    <BreakdownTitle
+                        mainTitle="Connect Four"
+                        subTitle="Player vs AI & Online 2 Player"
+                    />
                     <CroppedImage
                         image="bg-[url('../public/connect-four-game.png')]"
                         imageSize="bg-[length:110%]"
@@ -133,39 +132,6 @@ export default function Page() {
                             />
                         </div>
                     </LabeledContainer>
-                </div>
-                <div className="flex flex-col gap-3 mb-20">
-                    <Heading
-                        alignment="text-center"
-                        highlightIndices={[6, 7]}
-                        highlightColor="text-pink-400"
-                    >
-                        Major UI Components
-                    </Heading>
-                    <CroppedImage
-                        image="bg-[url('../public/connect-four-menu.png')]"
-                        imageSize="bg-[length:100%]"
-                        imagePosition="bg-[0%_0%]"
-                        imageOpacity="opacity-60"
-                        aspect="aspect-[16/17]"
-                        colorOverlay="bg-orange-400"
-                    />
-                    <CroppedImage
-                        image="bg-[url('../public/connect-four-lobby.png')]"
-                        imageSize="bg-[length:100%]"
-                        imagePosition="bg-[0%_0%]"
-                        imageOpacity="opacity-60"
-                        aspect="aspect-[16/25]"
-                        colorOverlay="bg-blue-400"
-                    />
-                    <CroppedImage
-                        image="bg-[url('../public/connect-four-game.png')]"
-                        imageSize="bg-[length:101%]"
-                        imagePosition="bg-[0%_50%]"
-                        imageOpacity="opacity-60"
-                        aspect="aspect-[16/27]"
-                        colorOverlay="bg-red-400"
-                    />
                 </div>
                 <div className="flex flex-col gap-3 mb-20">
                     <Heading

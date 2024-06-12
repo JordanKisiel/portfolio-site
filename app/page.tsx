@@ -123,7 +123,7 @@ export default function Home() {
                 </div>
 
                 {/* Porfolio */}
-                <div className="tb:flex tb:flex-col items-center">
+                <div className="tb:flex tb:flex-col items-center dt:max-w-[70rem]">
                     <div
                         className="flex flex-col items-center bg-[url('../public/portfolio-bg.svg')] bg-no-repeat 
                                 pt-3 pb-20 bg-top mb-10 tb:mt-10 tb:mb-6 tb:w-full"

@@ -1,12 +1,12 @@
 TODO:
-  - figure out why desktopnav links aren't receiving clicks
-  -  check and fix responsive design for homepage
-     x -  iPhone 12 Pro
-     x -  iPhone 14 Pro Max
-     x -  iPad Mini
-     x -  iPad Pro
-     x -  laptop
-     -  desktop
+  -  check and fix responsive design for kanban breakdown
+      x -  iPhone 12 Pro
+      x -  iPhone 14 Pro Max
+      x -  iPad Mini
+      x -  iPad Pro
+      x -  laptop
+      -  1200px
+      -  desktop
   -  check design on actual phone
   -  add google doc link to resume on homepage
   
