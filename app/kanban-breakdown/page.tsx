@@ -234,7 +234,7 @@ export default function Page() {
                 <div className="mb-20 txl:mb-32">
                     <CodeHightlight title="Dynamic Inputs">
                         <div className="flex flex-col gap-6 tb:grid tb:grid-cols-2 tb:gap-y-12">
-                            <div className="dt:order-1">
+                            <div>
                                 <CroppedImage
                                     image="bg-[url('../public/edit-board-modal.png')]"
                                     imageSize="bg-[length:125%]"
@@ -242,7 +242,7 @@ export default function Page() {
                                     aspect="aspect-[16/12]"
                                 />
                             </div>
-                            <div className="dt:order-4">
+                            <div>
                                 <Paragraph alignment="text-left">
                                     The dynamic nature of the input lists used
                                     for columns and subtasks provided an extra
@@ -251,7 +251,7 @@ export default function Page() {
                                     and delete.
                                 </Paragraph>
                             </div>
-                            <div className="dt:order-2">
+                            <div>
                                 <CroppedImage
                                     image="bg-[url('../public/dynamic-input-data-shape.png')]"
                                     imageSize="bg-[length:100%]"
@@ -260,7 +260,7 @@ export default function Page() {
                                 />
                             </div>
 
-                            <div className="dt:order-5">
+                            <div>
                                 <Paragraph alignment="text-left">
                                     To accomplish this, I used the data shape
                                     shown. An object with arrays for creation,
@@ -270,7 +270,7 @@ export default function Page() {
                                 </Paragraph>
                             </div>
 
-                            <div className="dt:order-3">
+                            <div>
                                 <CroppedImage
                                     image="bg-[url('../public/edit-column-logic.png')]"
                                     imageSize="bg-[length:150%]"
@@ -279,7 +279,7 @@ export default function Page() {
                                 />
                             </div>
 
-                            <div className="dt:order-6">
+                            <div>
                                 <Paragraph alignment="text-left">
                                     For instance, if the user edits a column,
                                     the “create” array is put through a map
@@ -324,7 +324,7 @@ export default function Page() {
                         />
                     </div>
 
-                    <div className="tb:w-4/5 txl:row-start-2 txl:row-end-7 txl:col-start-1 txl:col-end-3 txl:w-[90%]">
+                    <div className="tb:w-4/5 txl:row-start-2 txl:row-end-7 txl:col-start-1 txl:col-end-3 txl:w-[90%] txl:self-start">
                         <Paragraph alignment="text-center txl:text-left">
                             I chose NextAuth for it&apos;s easy integration into
                             Next.js projects and Github as the OAuth provider.

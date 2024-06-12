@@ -1,12 +1,13 @@
 TODO:
   -  check and fix responsive design for kanban breakdown
-      x -  iPhone 12 Pro
-      x -  iPhone 14 Pro Max
-      x -  iPad Mini
-      x -  iPad Pro
-      x -  laptop
+      -  iPhone 12 Pro
+      -  iPhone 14 Pro Max
+      -  iPad Mini
+      -  iPad Pro
+      -  laptop
       -  1200px
       -  desktop
+  -  add hover styles
   -  check design on actual phone
   -  add google doc link to resume on homepage
   
