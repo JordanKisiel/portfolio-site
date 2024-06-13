@@ -1,7 +1,8 @@
 TODO:
+  -  record highish resolution animation for connect four breakdown hero
   -  check and fix responsive design for kanban breakdown
-      -  iPhone 12 Pro
-      -  iPhone 14 Pro Max
+      x -  iPhone 12 Pro
+      x -  iPhone 14 Pro Max
       -  iPad Mini
       -  iPad Pro
       -  laptop
@@ -10,5 +11,6 @@ TODO:
   -  add hover styles
   -  check design on actual phone
   -  add google doc link to resume on homepage
+  -  record higher resolution gifs for animations
   
   -change favicon

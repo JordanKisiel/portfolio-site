@@ -30,35 +30,45 @@ export default function Page() {
                 <div className="w-full">
                     <BackHomeLink />
                 </div>
-                <div className="flex flex-col gap-5 mb-10 w-full">
+                <div className="flex flex-col gap-5 mb-16 w-full tb:mb-24">
                     <BreakdownTitle
                         mainTitle="Connect Four"
                         subTitle="Player vs AI & Online 2 Player"
                     />
                     <CroppedImage
                         image="bg-[url('../public/connect-four-game.png')]"
-                        imageSize="bg-[length:110%]"
+                        imageSize="bg-[length:110%] tb:bg-[length:100%]"
                         imagePosition="bg-[35%_35%]"
                         aspect="aspect-[16/9]"
                     />
                 </div>
-                <div className="mb-5">
-                    <Heading
-                        alignment="text-center"
-                        highlightIndices={[10]}
-                        highlightColor="text-red-400"
-                    >
-                        What is it?
-                    </Heading>
-                    <Paragraph alignment="text-left">
-                        This project is my web app implementation of the classic
-                        Connect Four game. It consists of a frontend client made
-                        with Next.js and a backend game server made with
-                        Express. It allows for single player against an AI and
-                        online two player.
-                    </Paragraph>
+                <div className="mb-16 tb:grid tb:grid-cols-2 tb:gap-12">
+                    <div>
+                        <Heading
+                            alignment="text-center tb:text-left"
+                            highlightIndices={[10]}
+                            highlightColor="text-red-400"
+                        >
+                            What is it?
+                        </Heading>
+                        <Paragraph alignment="text-left">
+                            This project is my web app implementation of the
+                            classic Connect Four game. It consists of a frontend
+                            client made with Next.js and a backend game server
+                            made with Express. It allows for single player
+                            against an AI and online two player.
+                        </Paragraph>
+                    </div>
+                    <div className="hidden tb:block">
+                        <CroppedImage
+                            image="bg-[url('../public/connect-four-game.png')]"
+                            imageSize="bg-[length:110%]"
+                            imagePosition="bg-[35%_30%]"
+                            aspect="aspect-[16/10]"
+                        />
+                    </div>
                 </div>
-                <div className="mb-20">
+                <div className="mb-16 w-full tb:grid tb:grid-cols-2 tb:gap-12 txl:gap-16 txl:mb-32">
                     <LabeledContainer
                         label="Features"
                         textColor="text-blue-100"
@@ -133,73 +143,93 @@ export default function Page() {
                         </div>
                     </LabeledContainer>
                 </div>
-                <div className="flex flex-col gap-3 mb-20">
-                    <Heading
-                        alignment="text-center"
-                        highlightIndices={[4, 5]}
-                        highlightColor="text-purple-400"
-                    >
-                        The AI
-                    </Heading>
-                    <Paragraph alignment="text-left">
-                        The computer player uses a typical minimax algorithm for
-                        turn-based, perfect information games. It searches to a
-                        depth of 4 moves ahead and saves the best 3 moves as
-                        scored by the evaluation function.
-                    </Paragraph>
-                    <Image
-                        className="my-10"
-                        src={decisionTreeDiagram}
-                        alt="Minimax decision tree diagram"
-                    />
-                    <Paragraph alignment="text-left">
-                        The main design goal of the AI was to make it feel like
-                        a fairly good but human player. To this end, I increased
-                        the odds of the AI choosing one of the sub-optimal saved
-                        moves as a function of the number of moves that had been
-                        made to that point. This had the dual effect of: 1)
-                        decreasing the occurrences of sub-optimal moves in the
-                        early game (which, in Connect Four, generally just means
-                        an automatic and unfun win for the player) and 2)
-                        increasing the occurrence of mistakes as the board state
-                        becomes more complex (which is generally expected from a
-                        human player).
-                    </Paragraph>
+                <div className="flex flex-col gap-3 mb-20 tb:max-w-[30rem]">
+                    <div>
+                        <Heading
+                            alignment="text-center"
+                            highlightIndices={[4, 5]}
+                            highlightColor="text-purple-400"
+                        >
+                            The AI
+                        </Heading>
+                    </div>
+                    <div>
+                        <Paragraph alignment="text-left tb:text-center">
+                            The computer player uses a typical minimax algorithm
+                            for turn-based, perfect information games. It
+                            searches to a depth of 4 moves ahead and saves the
+                            best 3 moves as scored by the evaluation function.
+                        </Paragraph>
+                    </div>
+                    <div>
+                        <Image
+                            className="my-10"
+                            src={decisionTreeDiagram}
+                            alt="Minimax decision tree diagram"
+                        />
+                    </div>
+                    <div>
+                        <Paragraph alignment="text-left tb:text-center">
+                            The main design goal of the AI was to make it feel
+                            like a fairly good but human player. To this end, I
+                            increased the odds of the AI choosing one of the
+                            sub-optimal saved moves as a function of the number
+                            of moves that had been made to that point. This had
+                            the dual effect of: 1) decreasing the occurrences of
+                            sub-optimal moves in the early game (which, in
+                            Connect Four, generally just means an automatic and
+                            unfun win for the player) and 2) increasing the
+                            occurrence of mistakes as the board state becomes
+                            more complex (which is generally expected from a
+                            human player).
+                        </Paragraph>
+                    </div>
                 </div>
 
-                <div className="flex flex-col gap-3 mb-20">
-                    <Heading
-                        alignment="text-center"
-                        highlightIndices={[7]}
-                        highlightColor="text-red-400"
-                    >
-                        Online 2 Player
-                    </Heading>
-                    <Paragraph alignment="text-left">
-                        Websockets were chosen over normal http requests for
-                        communication of game state between clients and the
-                        server due to their low latency nature. Socket.io was
-                        mostly chosen for its simpler API but it was nice to
-                        have automatic fallback to long polling and
-                        reconnections as additional features.
-                    </Paragraph>
-                    <Image
-                        className="my-5"
-                        src={serverClientDiagram}
-                        alt="Diagram showing that the game server is the source of truth for clients"
-                    />
-                    <Paragraph alignment="text-left">
-                        The game server is responsible for maintaining game
-                        state (being the one source of truth for both players),
-                        adding players to lobbies, keeping track of move timers,
-                        and allowing players to rejoin lobbies in case of
-                        disconnection.
-                    </Paragraph>
+                <div
+                    className="flex flex-col gap-3 mb-20 tb:grid tb:grid-cols-2 tb:gap-x-12 tb:gap-y-0 txl:gap-x-16
+                                txl:mb-32"
+                >
+                    <div className="tb:col-start-1 tb:col-end-3 tb:row-start-1 tb:row-end-2">
+                        <Heading
+                            alignment="text-center"
+                            highlightIndices={[7]}
+                            highlightColor="text-red-400"
+                        >
+                            Online 2 Player
+                        </Heading>
+                    </div>
+                    <div className="tb:mb-3 tb:col-start-1 tb:col-end-2 tb:row-start-4 tb:row-end-6">
+                        <Paragraph alignment="text-left">
+                            Websockets were chosen over normal http requests for
+                            communication of game state between clients and the
+                            server due to their low latency nature. Socket.io
+                            was mostly chosen for its simpler API but it was
+                            nice to have automatic fallback to long polling and
+                            reconnections as additional features.
+                        </Paragraph>
+                    </div>
+                    <div className="tb:col-start-1 tb:col-end-3 tb:row-start-2 tb:row-end-4 tb:place-self-center tb:px-36 tb:mb-6">
+                        <Image
+                            className="my-5"
+                            src={serverClientDiagram}
+                            alt="Diagram showing that the game server is the source of truth for clients"
+                        />
+                    </div>
+                    <div className="tb:col-start-2 tb:col-end-3 tb:row-start-4 tb:row-end-6 dt:place-self-center">
+                        <Paragraph alignment="text-left">
+                            The game server is responsible for maintaining game
+                            state (being the one source of truth for both
+                            players), adding players to lobbies, keeping track
+                            of move timers, and allowing players to rejoin
+                            lobbies in case of disconnection.
+                        </Paragraph>
+                    </div>
                 </div>
 
                 <div className="mb-20">
                     <CodeHightlight title="Game State">
-                        <>
+                        <div className="tb:flex tb:flex-col tb:items-center">
                             <Paragraph alignment="text-left">
                                 My initial attempt at implementing game state
                                 (and the transitions between those states)
@@ -228,7 +258,7 @@ export default function Page() {
                                 adding a player in the Waiting state triggers a
                                 transition to the InProgress state.
                             </Paragraph>
-                        </>
+                        </div>
                     </CodeHightlight>
                 </div>
 
@@ -259,7 +289,7 @@ export default function Page() {
                     </Paragraph>
                 </div>
 
-                <div className="mb-20">
+                <div className="mb-32">
                     <CodeHightlight title="Disk Drop Animations">
                         <>
                             <CroppedImage

@@ -114,7 +114,7 @@ export default function Page() {
                         textColor="text-orange-100"
                         bgColor="bg-orange-400"
                     >
-                        <div className="grid grid-cols-3 w-full gap-5 tb:grid-cols-2 tl:grid-cols-3 txl:gap-8">
+                        <div className="grid grid-cols-3 w-full gap-5 tb:grid-cols-2 tl:grid-cols-3 txl:gap-8 dt:gap-12">
                             <TechUsed
                                 logo={nextLogo}
                                 logoSize={60}
@@ -194,7 +194,7 @@ export default function Page() {
                             option as a relational database.
                         </Paragraph>
                     </div>
-                    <div className="order-3 tb:col-start-1 tb:col-end-2 tb:row-start-1 tb:row-end-8">
+                    <div className="order-3 tb:col-start-1 tb:col-end-2 tb:row-start-1 tb:row-end-8 dt:place-self-center">
                         <Image
                             className="my-10 tb:my-0"
                             src={relationDiagram}

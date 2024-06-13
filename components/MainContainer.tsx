@@ -7,7 +7,7 @@ export default function MainContainer({ children }: Props) {
         <main
             className="flex flex-col items-center relative overflow-x-hidden 
                          pt-5 px-5 sm:px-8 md:px-24 lg:px-28 tb:px-10 txl:px-16
-                         dt:px-28"
+                         dt:px-28 dt:max-w-[90rem]"
         >
             {children}
         </main>

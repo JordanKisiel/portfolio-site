@@ -18,7 +18,8 @@ export default function RootLayout({
             lang="en"
         >
             <body
-                className={`${outfit.variable} ${abhaya.variable} ${amiko.variable} ${orelega.variable} bg-orange-100`}
+                className={`${outfit.variable} ${abhaya.variable} ${amiko.variable} ${orelega.variable} 
+                          bg-orange-100 flex flex-col items-center`}
             >
                 {children}
             </body>
