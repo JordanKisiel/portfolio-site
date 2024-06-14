@@ -42,7 +42,7 @@ export default function Page() {
                         aspect="aspect-[16/9]"
                     />
                 </div>
-                <div className="mb-16 tb:grid tb:grid-cols-2 tb:gap-12">
+                <div className="mb-16 tb:grid tb:grid-cols-2 tb:gap-12 dt:mb-28">
                     <div>
                         <Heading
                             alignment="text-center tb:text-left"
@@ -143,7 +143,7 @@ export default function Page() {
                         </div>
                     </LabeledContainer>
                 </div>
-                <div className="flex flex-col gap-3 mb-20 tb:max-w-[30rem]">
+                <div className="flex flex-col gap-3 mb-20 tb:max-w-[30rem] dt:max-w-[40rem]">
                     <div>
                         <Heading
                             alignment="text-center"
@@ -187,8 +187,8 @@ export default function Page() {
                 </div>
 
                 <div
-                    className="flex flex-col gap-3 mb-20 tb:grid tb:grid-cols-2 tb:gap-x-12 tb:gap-y-0 txl:gap-x-16
-                                txl:mb-32"
+                    className="flex flex-col gap-3 mb-20 tb:grid tb:grid-cols-2 tb:gap-x-12 tb:gap-y-0
+                                tb:max-w-[40rem] txl:gap-x-16 txl:mb-32 dt:max-w-[50rem]"
                 >
                     <div className="tb:col-start-1 tb:col-end-3 tb:row-start-1 tb:row-end-2">
                         <Heading
@@ -227,7 +227,7 @@ export default function Page() {
                     </div>
                 </div>
 
-                <div className="mb-20">
+                <div className="mb-20 tb:max-w-[45rem] dt:max-w-[50rem] dt:mb-32">
                     <CodeHightlight title="Game State">
                         <div className="tb:flex tb:flex-col tb:items-center">
                             <Paragraph alignment="text-left">
@@ -240,7 +240,7 @@ export default function Page() {
                                 pattern.
                             </Paragraph>
                             <Image
-                                className="my-5"
+                                className="my-5 tb:my-10"
                                 src={gameStateDiagram}
                                 alt="Diagram showing basic state structure and delegation of 
                                  behavior to concrete states which all implement the abstract GameState"
@@ -262,61 +262,80 @@ export default function Page() {
                     </CodeHightlight>
                 </div>
 
-                <div className="flex flex-col mb-20 gap-3">
-                    <Heading
-                        alignment="text-center"
-                        highlightColor="text-orange-400"
-                        highlightIndices={[3]}
-                    >
-                        Animation
-                    </Heading>
-                    <CroppedImage
-                        image="bg-[url('../public/connect-four-menu-anim.gif')]"
-                        imageSize="bg-[length:100%]"
-                        imagePosition="bg-[0%_25%]"
-                        aspect="aspect-[16/22]"
-                    />
-                    <Paragraph alignment="text-left">
-                        Most parts of the app are animated to reinforce the idea
-                        of a fun and light-hearted experience. I chose GSAP as
-                        the animation framework because I had only used Framer
-                        Motion before and wanted to try something different.
-                        Overall, I ended up preferring GSAP as it was easier to
-                        simply drop some animation code into pre-existing
-                        components without major changes. Additionally, the
-                        timeline API makes it very simple to create staggered
-                        and delayed animations.
-                    </Paragraph>
+                <div
+                    className="flex flex-col mb-20 gap-3 tb:grid tb:grid-cols-8 tb:gap-y-0 tb:gap-x-12
+                                dt:max-w-[55rem]"
+                >
+                    <div className="tb:col-start-1 tb:col-end-4 tb:row-start-1 tb:row-end-2">
+                        <Heading
+                            alignment="text-center tb:text-left"
+                            highlightColor="text-orange-400"
+                            highlightIndices={[3]}
+                        >
+                            Animation
+                        </Heading>
+                    </div>
+                    <div className="tb:col-start-7 tb:col-end-12 tb:row-start-1 tb:row-end-6">
+                        <CroppedImage
+                            image="bg-[url('../public/connect-four-menu-anim.gif')]"
+                            imageSize="bg-[length:100%]"
+                            imagePosition="bg-[0%_25%]"
+                            aspect="aspect-[16/22]"
+                        />
+                    </div>
+                    <div className="tb:col-start-1 tb:col-end-7 tb:row-start-2 tb:row-end-3">
+                        <Paragraph alignment="text-left">
+                            Most parts of the app are animated to reinforce the
+                            idea of a fun and light-hearted experience. I chose
+                            GSAP as the animation framework because I had only
+                            used Framer Motion before and wanted to try
+                            something different. Overall, I ended up preferring
+                            GSAP as it was easier to simply drop some animation
+                            code into pre-existing components without major
+                            changes. Additionally, the timeline API makes it
+                            very simple to create staggered and delayed
+                            animations.
+                        </Paragraph>
+                    </div>
                 </div>
 
-                <div className="mb-32">
+                <div className="mb-32 tb:max-w-[45rem] dt:max-w-[50rem]">
                     <CodeHightlight title="Disk Drop Animations">
-                        <>
-                            <CroppedImage
-                                image="bg-[url('../public/connect-four-disc-drop.gif')]"
-                                imageSize="bg-[length:100%]"
-                                imagePosition="bg-[0%_38%]"
-                                aspect="aspect-[16/13]"
-                            />
-                            <Paragraph alignment="text-left">
-                                Animating the disks dropping into the board, as
-                                players made their moves, provided an extra
-                                challenge, as the end point of the animation
-                                (where the disk ended up on the board) was
-                                dynamic and dependent on the number of discs
-                                that were already in that column.
-                            </Paragraph>
-                            <Image
-                                className="my-10"
-                                src={formulaDiagram}
-                                alt="Diagram showing how the end point of the disc drop animation was derived"
-                            />
-                            <Paragraph alignment="text-left">
-                                Drawing out the problem made it much easier to
-                                derive the formula needed to calculate the end
-                                point.
-                            </Paragraph>
-                        </>
+                        <div className="tb:grid tb:grid-cols-2 tb:gap-10">
+                            <div className="tb:order-1">
+                                <CroppedImage
+                                    image="bg-[url('../public/connect-four-disc-drop.gif')]"
+                                    imageSize="bg-[length:100%]"
+                                    imagePosition="bg-[0%_38%]"
+                                    aspect="aspect-[16/13]"
+                                />
+                            </div>
+                            <div className="tb:order-2">
+                                <Paragraph alignment="text-left">
+                                    Animating the disks dropping into the board,
+                                    as players made their moves, provided an
+                                    extra challenge, as the end point of the
+                                    animation (where the disk ended up on the
+                                    board) was dynamic and dependent on the
+                                    number of discs that were already in that
+                                    column.
+                                </Paragraph>
+                            </div>
+                            <div className="tb:order-4">
+                                <Image
+                                    className="my-10 tb:my-0"
+                                    src={formulaDiagram}
+                                    alt="Diagram showing how the end point of the disc drop animation was derived"
+                                />
+                            </div>
+                            <div className="tb:order-3">
+                                <Paragraph alignment="text-left">
+                                    Drawing out the problem made it much easier
+                                    to derive the formula needed to calculate
+                                    the end point.
+                                </Paragraph>
+                            </div>
+                        </div>
                     </CodeHightlight>
                 </div>
 
