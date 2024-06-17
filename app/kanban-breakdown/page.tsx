@@ -37,7 +37,7 @@ export default function Page() {
                     />
                     <CroppedImage
                         image="bg-[url('../public/kanban-mobile-thumb.png')] 
-                               tb:bg-[url('../public/dragndrop.gif')]"
+                               tb:bg-[url('../public/kanban-dragndrop-demo-720-res.gif')]"
                         imageSize="bg-[length:300%] tb:bg-[length:150%] tl:bg-[length:100%]"
                         imagePosition="bg-[14%_10%] tb:bg-[0%_25%]"
                         aspect="aspect-[16/9]"
@@ -359,9 +359,9 @@ export default function Page() {
                     </div>
                     <div className="w-full tb:w-[30rem]">
                         <CroppedImage
-                            image="bg-[url('../public/dragndrop.gif')]"
+                            image="bg-[url('../public/kanban-dragndrop-demo-720-res.gif')]"
                             imageSize="bg-[length:250%] tb:bg-[length:200%]"
-                            imagePosition="bg-[35%_25%] tb:bg-[27%_25%]"
+                            imagePosition="bg-[48%_25%] tb:bg-[55%_22%]"
                             aspect="aspect-[16/14] tb:aspect-[16/9]"
                         />
                     </div>

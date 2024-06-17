@@ -28,6 +28,7 @@ export default function PortfolioLink({
         <Link
             className={`rounded-[5px] bg-no-repeat bg-[center_left_1rem] block 
                                    border-2 border-neutral-900 drop-shadow-[4px_4px_0px_rgba(22,22,22,1)]
+                                   hover:drop-shadow-[6px_6px_0px_rgba(22,22,22,1)]
                                    ${bgSize} ${textColor} ${bgColor} ${icon}`}
             href={url}
         >

@@ -36,9 +36,11 @@ export default function Page() {
                         subTitle="Player vs AI & Online 2 Player"
                     />
                     <CroppedImage
-                        image="bg-[url('../public/connect-four-game.png')]"
-                        imageSize="bg-[length:110%] tb:bg-[length:100%]"
-                        imagePosition="bg-[35%_35%]"
+                        image="bg-[url('../public/connect-four-game.png')]
+                               tb:bg-[url('../public/connect-four-demo-720-res.gif')]
+                               dt:bg-[url('../public/connect-four-demo-full-res.gif')]"
+                        imageSize="bg-[length:110%] tb:bg-[length:180%]"
+                        imagePosition="bg-[35%_35%] tb:bg-[50%_47%]"
                         aspect="aspect-[16/9]"
                     />
                 </div>
@@ -103,7 +105,7 @@ export default function Page() {
                         textColor="text-orange-100"
                         bgColor="bg-orange-400"
                     >
-                        <div className="grid grid-cols-3 w-full gap-5">
+                        <div className="grid grid-cols-3 w-full gap-5 dt:gap-10">
                             <TechUsed
                                 logo={nextLogo}
                                 logoSize={60}
