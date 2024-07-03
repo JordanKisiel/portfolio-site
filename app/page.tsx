@@ -101,7 +101,7 @@ export default function Home() {
                                 />
                                 <ContactListLink
                                     bgIcon="bg-[url('../public/resume-icon.svg')]"
-                                    linkUrl="#"
+                                    linkUrl="https://drive.google.com/file/d/1UxegxtubC-oYkjqaAuzt1DkWUixF_5Px/view?usp=sharing"
                                     text="Resume"
                                 />
                             </ul>

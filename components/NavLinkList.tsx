@@ -22,7 +22,9 @@ export default function NavLinkList({ onClick }: Props) {
                 </a>
             </li>
             <li>
-                <a href="#">Resume</a>
+                <a href="https://drive.google.com/file/d/1UxegxtubC-oYkjqaAuzt1DkWUixF_5Px/view?usp=sharing">
+                    Resume
+                </a>
             </li>
         </>
     )

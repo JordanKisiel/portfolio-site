@@ -1,2 +1,5 @@
 TODO:
-  -  add google doc link to resume on homepage
+  -  deploy porfolio
+  -  post about portfolio update on Linkedin
+  -  review padding and spacing on site
+  -  add live site and repo links to breakdown pages
