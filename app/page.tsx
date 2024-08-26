@@ -136,7 +136,7 @@ export default function Home() {
                     </div>
 
                     <Project
-                        title="Kanban Project Management Tool"
+                        title="Kanban: Project Management Tool"
                         thumbnail={
                             <CroppedImage
                                 image="bg-[url('../public/kanban-mobile-thumb.png')]"
